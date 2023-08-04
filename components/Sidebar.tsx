@@ -39,17 +39,17 @@ const socials = [
   {
     label: "LinkedIn",
     icon: AiFillLinkedin,
-    href: "",
+    href: "https://www.linkedin.com/in/sabrina-y-wang/",
   },
   {
     label: "Github",
     icon: AiFillGithub,
-    href: "",
+    href: "https://github.com/penguinboots",
   },
   {
     label: "Email",
     icon: AiOutlineMail,
-    href: "",
+    href: "mailto: sabrina.ynw@gmail.com",
   },
 ];
 
@@ -73,7 +73,7 @@ const Sidebar = () => {
               rounded-lg transition`,
               pathname === route.href
                 ? "text-white bg-white/10"
-                : "text-zinc-400"
+                : "text-secondary-foreground"
             )}
           >
             <route.icon className="h-5 w-5 mr-3" />
@@ -82,14 +82,14 @@ const Sidebar = () => {
         ))}
       </div>
       <div className="space-y-4 flex flex-col items-center">
-        <Button>Resume</Button>
         <div className="flex space-x-4">
           {socials.map((social) => (
-            <Link href={social.href} key={social.href}>
-              <social.icon className="h-7 w-7" />
-            </Link>
+            <a href={social.href} key={social.href} target="_blank">
+              <social.icon className="h-7 w-7 text-secondary-foreground" />
+            </a>
           ))}
         </div>
+        <Button variant="secondary">Resume</Button>
       </div>
     </div>
   );
