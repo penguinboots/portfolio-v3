@@ -89,7 +89,7 @@ const Sidebar = () => {
             </a>
           ))}
         </div>
-        <Button variant="secondary">Resume</Button>
+        <Button variant="default">Resume</Button>
       </div>
     </div>
   );
