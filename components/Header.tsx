@@ -1,7 +1,9 @@
+import { LucideIcon } from "lucide-react";
+
 interface HeaderProps {
   title: string;
   desc: string;
-  icon: any;
+  icon: LucideIcon;
 }
 
 export const Header = ({title, desc, icon: Icon} : HeaderProps) => {
