@@ -4,8 +4,14 @@
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --eggplant: 335, 48%, 25%;
+    --sky-magenta: 329, 30%, 57%;
+    --fairy: 328, 71%, 85%;
+    --blush: 333, 100%, 96%;
+    --cambridge: 162, 27%, 63%;
+
+    --background: var(--blush);
+    --foreground: var(--eggplant);
  
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -19,11 +25,11 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
  
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--eggplant)%;
+    --primary-foreground: var(--blush);
  
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--sky-magenta);
+    --secondary-foreground: var(--blush);
  
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
