@@ -69,11 +69,11 @@ const Sidebar = () => {
               `
               text-sm group flex p-3 w-full
               justify-start font-medium cursor-pointer
-              hover:text-white hover:bg-white/10
+              hover:text-black/60 hover:bg-white/10
               rounded-lg transition`,
               pathname === route.href
-                ? "text-white bg-white/10"
-                : "text-secondary-foreground"
+                ? "text-black bg-white/10"
+                : "text-black/50"
             )}
           >
             <route.icon className="h-5 w-5 mr-3" />
