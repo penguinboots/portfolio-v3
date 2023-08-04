@@ -89,7 +89,13 @@ const Sidebar = () => {
             </a>
           ))}
         </div>
-        <Button variant="secondary" className="bg-slate-400">Resume</Button>
+        <Button
+          asChild
+          variant="secondary"
+          className="bg-slate-400 rounded-full"
+        >
+          <a href="https://flowcv.com/resume/7vgjugqk7r" target="_blank">Resume</a>
+        </Button>
       </div>
     </div>
   );
