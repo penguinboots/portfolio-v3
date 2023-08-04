@@ -69,11 +69,11 @@ const Sidebar = () => {
               `
               text-sm group flex p-3 w-full
               justify-start font-medium cursor-pointer
-              hover:text-black/60 hover:bg-white/10
+              hover:text-slate-200 hover:bg-white/10
               rounded-lg transition`,
               pathname === route.href
-                ? "text-black bg-white/10"
-                : "text-black/50"
+                ? "text-slate-200 bg-white/10"
+                : "text-slate-400"
             )}
           >
             <route.icon className="h-5 w-5 mr-3" />
@@ -85,11 +85,11 @@ const Sidebar = () => {
         <div className="flex space-x-4">
           {socials.map((social) => (
             <a href={social.href} key={social.href} target="_blank">
-              <social.icon className="h-7 w-7 text-secondary-foreground" />
+              <social.icon className="h-7 w-7 text-slate-400" />
             </a>
           ))}
         </div>
-        <Button variant="default">Resume</Button>
+        <Button variant="secondary" className="bg-slate-400">Resume</Button>
       </div>
     </div>
   );
