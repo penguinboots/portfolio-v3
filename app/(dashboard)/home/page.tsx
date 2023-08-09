@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Lobster } from "next/font/google";
 import { cn } from "@/lib/utils";
-
-const lobster = Lobster({ weight: ["400"], subsets: ["latin"]});
+import { coverFont } from "@/lib/fonts";
 
 const HomePage = () => {
   return (
@@ -12,7 +10,7 @@ const HomePage = () => {
         <h1
           className={cn(
             "text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-bold",
-            lobster.className
+            coverFont.className
           )}
         >
           Hello there,
