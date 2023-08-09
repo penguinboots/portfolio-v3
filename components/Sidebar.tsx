@@ -1,40 +1,14 @@
 "use client";
-import { ClipboardList, FileCode, Home, Sticker, Wrench } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import routes from "@/lib/routes";
+import type { Route } from "../lib/routes";
 
-const routes = [
-  {
-    label: "Home",
-    icon: Home,
-    href: "/home",
-  },
-  {
-    label: "Experience",
-    icon: ClipboardList,
-    href: "/experience",
-  },
-  {
-    label: "Projects",
-    icon: FileCode,
-    href: "/projects",
-  },
-  {
-    label: "Tools",
-    icon: Wrench,
-    href: "/tools",
-  },
-  {
-    label: "Contact",
-    icon: Sticker,
-    href: "/contact",
-  },
-];
-
+const routeArray: Route[] = Object.values(routes);
 const socials = [
   {
     label: "LinkedIn",
@@ -61,7 +35,7 @@ const Sidebar = () => {
         <h1>LOGO</h1>
       </div>
       <div className="space-y-4 p-4 flex-col w-2/3">
-        {routes.map((route) => (
+        {routeArray.map((route) => (
           <Link
             href={route.href}
             key={route.href}
@@ -94,7 +68,9 @@ const Sidebar = () => {
           variant="secondary"
           className="bg-slate-400 rounded-full"
         >
-          <a href="https://flowcv.com/resume/7vgjugqk7r" target="_blank">Resume</a>
+          <a href="https://flowcv.com/resume/7vgjugqk7r" target="_blank">
+            Resume
+          </a>
         </Button>
       </div>
     </div>
