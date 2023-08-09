@@ -54,14 +54,15 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         md:flex-col 
         md:fixed 
         md:inset-y-0
-        bg-slate-700"
+        bg-slate-700
+        z-50"
       >
         <Sidebar />
       </div>
       <div className="md:hidden">
         <Navbar />
       </div>
-      <main className="md:pl-72 lg:pl-96">
+      <main className="md:pl-72 lg:pl-96 h-full w-full fixed z-10">
         {pathname !== "/home" && (
           <Header
             title={routes[pathname].label}
