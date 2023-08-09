@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <div className="h-full relative">
+    <div className="h-full relative flex">
       <div
         className="
         hidden
@@ -27,7 +27,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="md:hidden">
         <Navbar />
       </div>
-      <main className="md:pl-72 lg:pl-96 h-full w-full fixed z-10">
+      <main className="md:pl-72 lg:pl-96 h-full w-full z-10">
         {pathname !== "/home" && (
           <Header
             title={routes[pathname].label}
