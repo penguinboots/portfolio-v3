@@ -22,7 +22,7 @@ const HomePage = () => {
         <p className="text-sm sm:text-xl">
           Developer, artist, and maker of weird things.
         </p>
-        <Link href="/experience">
+        <Link href="/about">
           <Button className="w-48 font-bold">GET TO KNOW ME</Button>
         </Link>
       </div>

@@ -1,4 +1,4 @@
-import { ClipboardList, FileCode, Home, LucideIcon, Sticker, Wrench } from "lucide-react";
+import { ClipboardList, FileCode, Home, Laugh, LucideIcon, Sticker, Wrench } from "lucide-react";
 
 export type Route = {
   label: string;
@@ -14,17 +14,23 @@ const routes: { [key: string]: Route } = {
     description: "/placeholder text here",
     href: "/home",
   },
-  "/experience": {
-    label: "Experience",
-    icon: ClipboardList,
+  "/about": {
+    label: "About",
+    icon: Laugh,
     description: "/placeholder text here",
-    href: "/experience",
+    href: "/about",
   },
   "/projects": {
     label: "Projects",
     icon: FileCode,
     description: "/placeholder text here",
     href: "/projects",
+  },
+  "/experience": {
+    label: "Experience",
+    icon: ClipboardList,
+    description: "/placeholder text here",
+    href: "/experience",
   },
   "/skills": {
     label: "Skills",
