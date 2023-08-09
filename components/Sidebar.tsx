@@ -44,7 +44,7 @@ const Sidebar = () => {
             key={route.href}
             className={cn(
               `
-              text-md group flex p-3 w-full
+              text-sm group flex p-2 sm:p-3 md:p-4 w-full
               justify-start font-medium cursor-pointer
               hover:text-slate-200 hover:bg-white/10
               rounded-lg transition`,
