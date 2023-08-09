@@ -20,7 +20,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         md:flex-col 
         md:fixed 
         md:inset-y-0
-        bg-slate-700
         z-50"
       >
         <Sidebar />
