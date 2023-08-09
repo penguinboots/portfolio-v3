@@ -2,7 +2,14 @@
 import { Header } from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
-import { ClipboardList, FileCode, Home, LucideIcon, Sticker, Wrench } from "lucide-react";
+import {
+  ClipboardList,
+  FileCode,
+  Home,
+  LucideIcon,
+  Sticker,
+  Wrench,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 
 type Route = {
