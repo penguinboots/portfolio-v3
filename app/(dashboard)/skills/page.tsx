@@ -11,7 +11,7 @@ interface Skill {
 
 const createSkillList = (skills: Skill[]) => {
   return skills.map((skill) => (
-    <li key={skill.name}>
+    <li key={skill.name} className="flex flex-col items-center">
       <Image
         priority
         height={50}
@@ -19,6 +19,7 @@ const createSkillList = (skills: Skill[]) => {
         src={devIcons[skill.img]}
         alt={skill.name}
       />
+      <p className="text-xs p-2">{skill.name}</p>
     </li>
   ));
 };
@@ -30,7 +31,7 @@ const testingList = createSkillList(testing);
 const otherList = createSkillList(other);
 
 const skillList = "flex flex-col items-center gap-2";
-const skillItem = "flex gap-2";
+const skillItem = "flex gap-3";
 const skillHeading = cn("text-xl", titleFont.className);
 
 const SkillsPage = () => {
