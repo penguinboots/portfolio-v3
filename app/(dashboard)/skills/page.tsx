@@ -10,7 +10,13 @@ interface Skill {
 const createSkillList = (skills: Skill[]) => {
   return skills.map((skill) => (
     <li key={skill.name}>
-      <Image width="50" height="50" src={devIcons[skill.img]} alt={skill.name} />
+      <Image
+        priority
+        height={50}
+        width={50}
+        src={devIcons[skill.img]}
+        alt={skill.name}
+      />
     </li>
   ));
 };
