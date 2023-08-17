@@ -28,7 +28,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
       </div>
       <main className="md:pl-72 lg:pl-96 h-full w-full z-10">
-        {pathname !== "/home" && (
+        {pathname !== "/home" && pathname.indexOf("/", 1) === -1 && (
           <Header
             title={routes[pathname].label}
             desc={routes[pathname].description}
