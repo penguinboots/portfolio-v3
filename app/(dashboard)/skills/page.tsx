@@ -1,6 +1,6 @@
 import { devIcons } from "@/public/icons";
 import Image from "next/image";
-import { languages, frameworks, systems, testing, other } from "@/lib/skills";
+import { languages, frameworks, systems, testing, other } from "@/data/skills";
 import { cn } from "@/lib/utils";
 import { titleFont } from "@/lib/fonts";
 
