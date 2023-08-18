@@ -33,7 +33,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           />
         )}
         {pathname === "/home" && (
-          <div className="h-24 flex items-center justify-end p-4">
+          <div className="md:hidden h-24 flex items-center justify-end p-4">
             <Navbar />
           </div>
         )}
