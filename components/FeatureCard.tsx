@@ -7,6 +7,9 @@ import { Project } from "@/data/projects";
 import Card from "./Card";
 import Link from "next/link";
 
+import { AiFillGithub } from "react-icons/ai";
+import { BiSolidPointer } from "react-icons/bi";
+
 interface FeatureCardProps {
   project: Project;
 }
@@ -29,12 +32,26 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
             />
           </Link>
         </div>
-        <div className="p-6 bg-slate-200 h-48 md:h-64">
-          <h1 className={cn("text-xl", titleFont.className)}>
-            {project.title}
-          </h1>
-          <p>{project.description}</p>
-          <ul className="flex gap-2">{stack}</ul>
+        <div className="flex flex-col justify-between p-8 bg-slate-200 h-48 md:h-64">
+          <div>
+            <div className="flex justify-between items-center py-2">
+              <h1 className={cn("text-xl", titleFont.className)}>
+                {project.title}
+              </h1>
+              <div className="flex">
+                <a href={project.repo} target="_blank">
+                  <AiFillGithub className="h-8 w-8" />
+                </a>
+                {project.live && (
+                  <a href={project.live} target="_blank">
+                    <BiSolidPointer className="h-8 w-8" />
+                  </a>
+                )}
+              </div>
+            </div>
+            <p>{project.description}</p>
+          </div>
+          <ul className="flex flex-wrap gap-2">{stack}</ul>
         </div>
       </div>
     </Card>
