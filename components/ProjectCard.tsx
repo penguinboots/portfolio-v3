@@ -1,15 +1,44 @@
-import { cn } from "@/lib/utils";
-import Card from "./Card";
+import Image from "next/image";
 import { titleFont } from "@/lib/fonts";
-import { AiFillGithub } from "react-icons/ai";
+import { cn } from "@/lib/utils";
 
-const ProjectCard = () => {
+import Card from "./Card";
+import { Project } from "@/data/projects";
+
+import { AiFillGithub } from "react-icons/ai";
+import { BiSolidPointer } from "react-icons/bi";
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Card>
-      <div className="w-full h-48 flex flex-col items-center justify-center">
-        <h1 className={cn("text-xl", titleFont.className)}>Project Title</h1>
-        <div>
-          <AiFillGithub className="h-8 w-8" />
+      <div className="relative w-full h-48 flex flex-col items-center justify-center">
+        <Image
+          alt={project.title}
+          src={`/projects/previews/${project.ref}.png`}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <div
+          className="z-20 opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-white/80 
+        flex flex-col items-center justify-center"
+        >
+          <h1 className={cn("text-xl", titleFont.className)}>
+            {project.title}
+          </h1>
+          <div className="flex">
+            <a href={project.repo} target="_blank">
+              <AiFillGithub className="h-8 w-8" />
+            </a>
+            {project.live && (
+              <a href={project.live} target="_blank">
+                <BiSolidPointer className="h-8 w-8" />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </Card>
