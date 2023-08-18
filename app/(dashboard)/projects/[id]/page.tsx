@@ -2,10 +2,22 @@
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const ProjectPage = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(false);
+  }, []);
+
   return (
     <div className="flex h-full px-4">
+      {!isLoaded && (
+        <div className="absolute bg-white h-full w-full flex items-center justify-center z-20 ease-out">
+          <div>LOADING...</div>
+        </div>
+      )}
       <div className="flex fixed bottom-4 left-4 md:hidden z-20">
         <Link href="/projects">
           <div className="p-2 rounded-full bg-slate-200">
