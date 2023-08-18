@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -17,12 +17,12 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <div className="p-2">
       <Sheet>
         <SheetTrigger>
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <div className="p-2">
             <Menu />
-          </Button>
+          </div>
         </SheetTrigger>
         <SheetContent side="left" className="p-0">
           <Sidebar />
