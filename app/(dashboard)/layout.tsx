@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <div className="h-full relative flex">
+    <div className="h-full relative flex flex-col">
       <div
         className="
         hidden
@@ -24,9 +24,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       >
         <Sidebar />
       </div>
-      <div className="md:hidden">
-        <Navbar />
-      </div>
       <main className="md:pl-72 lg:pl-96 h-full w-full z-10">
         {pathname !== "/home" && pathname.indexOf("/", 1) === -1 && (
           <Header
@@ -34,6 +31,11 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
             desc={routes[pathname].description}
             icon={routes[pathname].icon}
           />
+        )}
+        {pathname === "/home" && (
+          <div className="h-24 flex items-center justify-end p-4">
+            <Navbar />
+          </div>
         )}
         {children}
       </main>
