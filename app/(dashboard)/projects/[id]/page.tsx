@@ -8,7 +8,7 @@ const ProjectPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(false);
+    setIsLoaded(true);
   }, []);
 
   return (
