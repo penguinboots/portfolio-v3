@@ -21,7 +21,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
       <Link href="/projects/1">
         <div>
           <div className="relative bg-slate-500 h-48 md:h-64 overflow-hidden">
-            <Image alt={project.title} src={project.image} fill style={{objectFit: "cover"}} />
+            <Image alt={project.title} src={`/projects/previews/${project.ref}.png`} fill style={{objectFit: "cover"}} />
           </div>
           <div className="p-6 bg-slate-200 h-48 md:h-64">
             <h1 className={cn("text-xl", titleFont.className)}>

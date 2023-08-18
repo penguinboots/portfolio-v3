@@ -1,13 +1,6 @@
-import mimikyuImg from "@/public/projects/previews/mimikyu.png";
-import bytesImg from "@/public/projects/previews/bytes.png";
-import jungleImg from "@/public/projects/previews/jungle.png";
-import schedulerImg from "@/public/projects/previews/scheduler.png";
-import shortlyImg from "@/public/projects/previews/shortly.png";
-import messengerImg from "@/public/projects/previews/messenger.png";
-
 export interface Project {
   title: string;
-  image: string;
+  ref: string;
   description: string;
   live: string | null;
   repo: string;
@@ -16,9 +9,9 @@ export interface Project {
 
 const genius: Project = {
   title: "Lil Genius",
-  image: messengerImg,
+  ref: "genius",
   description:
-    "A full-stack, SaaS AI platform with a free and paid tier. AI tools include chat, image, video, music, and code generation leveraging APIs from OpenAI and Replicate.",
+    "A full-stack, SaaS AI platform with a free and paid tier. AI tools include chat, ref, video, music, and code generation leveraging APIs from OpenAI and Replicate.",
   live: "https://lil-genius.vercel.app/",
   repo: "https://github.com/penguinboots/lil-genius",
   stack: [
@@ -34,7 +27,7 @@ const genius: Project = {
 
 const messenger: Project = {
   title: "Lil Messenger Clone",
-  image: messengerImg,
+  ref: "messenger",
   description:
     "Full-stack, real-time Messenger clone with read-receipts, group chats, and more.",
   live: "https://lil-messenger-clone.vercel.app/",
@@ -44,7 +37,7 @@ const messenger: Project = {
 
 const portfolio: Project = {
   title: "Portfolio Website",
-  image: "",
+  ref: "portfoliov2",
   description: "This website!",
   live: null,
   repo: "https://github.com/penguinboots/penguin-portfolio",
@@ -53,7 +46,7 @@ const portfolio: Project = {
 
 const mimikyu: Project = {
   title: "Mimikyu's Day Off",
-  image: mimikyuImg,
+  ref: "mimikyu",
   description:
     "Capstone Project: A pokemon-themed roguelite game. Art and design by me.",
   live: "https://mimikyus-day-off.vercel.app",
@@ -63,7 +56,7 @@ const mimikyu: Project = {
 
 const shortly: Project = {
   title: "Shortly",
-  image: shortlyImg,
+  ref: "shortly",
   description:
     "URL Shortener using shrtco.de API. Views for desktop, tablet, and mobile.",
   live: "https://shortly-url-shortener-five.vercel.app",
@@ -73,7 +66,7 @@ const shortly: Project = {
 
 const jungle: Project = {
   title: "Jungle",
-  image: jungleImg,
+  ref: "jungle",
   description:
     "A mini e-commerce app. Adding features to an existing codebase.",
   live: "",
@@ -83,7 +76,7 @@ const jungle: Project = {
 
 const scheduler: Project = {
   title: "Interview Scheduler",
-  image: schedulerImg,
+  ref: "scheduler",
   description: "Single-page React application to schedule interviews.",
   live: null,
   repo: "https://github.com/penguinboots/scheduler",
@@ -92,7 +85,7 @@ const scheduler: Project = {
 
 const bytes: Project = {
   title: "Bytes Restaurant",
-  image: bytesImg,
+  ref: "bytes",
   description:
     "Midterm Group Project: A full-stack food-pickup app with Twilio integration.",
   live: null,
@@ -102,7 +95,7 @@ const bytes: Project = {
 
 const tweeter: Project = {
   title: "Tweeter",
-  image: "",
+  ref: "tweeter",
   description: "A simple, single-page Twitter clone.",
   live: null,
   repo: "https://github.com/penguinboots/tweeter",
