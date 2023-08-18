@@ -48,7 +48,7 @@ const Sidebar = () => {
               justify-start font-medium cursor-pointer
               hover:text-slate-200 hover:bg-white/10
               rounded-lg transition`,
-              pathname === route.href
+              pathname.includes(route.href)
                 ? "text-slate-200 bg-white/10"
                 : "text-slate-400"
             )}
