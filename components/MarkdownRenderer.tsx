@@ -17,7 +17,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath }) => {
       });
   }, [filePath]);
 
-  return <ReactMarkdown className="markdown p-6">{markdownContent}</ReactMarkdown>;
+  return <ReactMarkdown className="markdown">{markdownContent}</ReactMarkdown>;
 };
 
 export default MarkdownRenderer;

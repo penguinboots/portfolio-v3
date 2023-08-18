@@ -18,7 +18,7 @@ const ProjectPage = () => {
         </Link>
       </div>
       <div className="flex flex-col items-center">
-        <div className="md:w-3/4 lg:w-2/3">
+        <div className="md:w-3/4 lg:w-2/3 md:py-12">
           <MarkdownRenderer filePath="test.md" />
         </div>
       </div>
