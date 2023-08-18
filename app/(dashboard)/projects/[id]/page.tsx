@@ -2,8 +2,12 @@
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const ProjectPage = () => {
+  const pathname = usePathname();
+  const projectRef = pathname.substring(pathname.lastIndexOf("/"));
+
   return (
     <div className="flex h-full px-4">
       <div className="flex fixed bottom-4 left-4 md:hidden z-20">
@@ -20,9 +24,9 @@ const ProjectPage = () => {
           </div>
         </Link>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         <div className="md:w-3/4 lg:w-2/3 md:py-12">
-          <MarkdownRenderer filePath="genius.md" />
+          <MarkdownRenderer filePath={`${projectRef}.md`} />
         </div>
       </div>
     </div>
