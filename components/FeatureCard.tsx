@@ -20,10 +20,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
     <Card>
       <Link href="/projects/1">
         <div>
-          <div className="w-full bg-slate-500 h-48 md:h-64 overflow-hidden">
-            {project.image && <Image alt="project image" src={project.image} />}
+          <div className="relative bg-slate-500 h-48 md:h-64 overflow-hidden">
+            <Image alt={project.title} src={project.image} fill style={{objectFit: "cover"}} />
           </div>
-          <div className="w-full p-6 bg-slate-200 h-48 md:h-64">
+          <div className="p-6 bg-slate-200 h-48 md:h-64">
             <h1 className={cn("text-xl", titleFont.className)}>
               {project.title}
             </h1>
