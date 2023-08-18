@@ -1,6 +1,5 @@
 "use client";
 import { Menu } from "lucide-react";
-import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
@@ -17,12 +16,10 @@ const Navbar = () => {
   }
 
   return (
-    <div className="p-2">
+    <div>
       <Sheet>
         <SheetTrigger>
-          <div className="p-2">
-            <Menu />
-          </div>
+          <Menu className="w-8 h-8"/>
         </SheetTrigger>
         <SheetContent side="left" className="p-0">
           <Sidebar />
