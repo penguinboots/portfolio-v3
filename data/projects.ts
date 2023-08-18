@@ -4,11 +4,10 @@ import jungleImg from "@/public/projects/previews/jungle.png";
 import schedulerImg from "@/public/projects/previews/scheduler.png";
 import shortlyImg from "@/public/projects/previews/shortly.png";
 import messengerImg from "@/public/projects/previews/messenger.png";
-import { StaticImageData } from "next/image";
 
 export interface Project {
   title: string;
-  image: StaticImageData;
+  image: string;
   description: string;
   live: string | null;
   repo: string;
