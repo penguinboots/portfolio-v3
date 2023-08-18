@@ -1,5 +1,4 @@
 "use client";
-import { Header } from "@/components/Header";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
