@@ -5,15 +5,19 @@ import Link from "next/link";
 
 const ProjectPage = () => {
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex md:hidden bg-slate-100 h-12 w-full">
+    <div className="flex h-full px-4">
+      <div className="flex fixed bottom-4 left-4 md:hidden z-20">
         <Link href="/projects">
-          <ChevronLeft className="w-12 h-12" />
+          <div className="p-2 rounded-full bg-slate-200">
+            <ChevronLeft className="w-12 h-12" />
+          </div>
         </Link>
       </div>
-      <div className="hidden md:flex fixed bg-slate-100 h-full items-center justify-center">
+      <div className="hidden md:flex self-center fixed">
         <Link href="/projects">
-          <ChevronLeft className="w-12 h-12" />
+          <div className="bg-slate-200 py-4 px-1 rounded-2xl flex items-center justify-center">
+            <ChevronLeft className="w-12 h-12" />
+          </div>
         </Link>
       </div>
       <div className="flex flex-col items-center">
