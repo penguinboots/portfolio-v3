@@ -13,7 +13,6 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ filePath }) => {
       .then((response) => response.text())
       .then((text) => {
         setMarkdownContent(text);
-        console.log(typeof text)
       });
   }, [filePath]);
 
