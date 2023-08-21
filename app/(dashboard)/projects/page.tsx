@@ -15,7 +15,15 @@ import {
 } from "@/data/projects";
 
 const features = [mimikyu, messenger, genius]
-const projects = [bytes, portfoliov2, shortly, jungle, scheduler, portfoliov1, tweeter]
+const projects = [
+  bytes,
+  shortly,
+  portfoliov2,
+  portfoliov1,
+  jungle,
+  scheduler,
+  tweeter,
+];
 
 const ProjectsPage = () => {
   return (
@@ -26,7 +34,7 @@ const ProjectsPage = () => {
         ))}
         <div className="bg-slate-100 hidden lg:flex xl:hidden">IMAGE HERE</div>
       </div>
-      <div className="w-full p-4 gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="w-full p-4 gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
