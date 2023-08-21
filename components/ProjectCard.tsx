@@ -32,14 +32,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </h1>
           <p className="text-xs text-center py-1 px-6">{project.description}</p>
           <div className="flex">
-            <a href={project.repo} target="_blank">
-              <AiFillGithub className="h-8 w-8" />
-            </a>
             {project.live && (
               <a href={project.live} target="_blank">
                 <BiSolidPointer className="h-8 w-8" />
               </a>
             )}
+            <a href={project.repo} target="_blank">
+              <AiFillGithub className="h-8 w-8" />
+            </a>
           </div>
         </div>
       </div>

@@ -39,14 +39,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
                 {project.title}
               </h1>
               <div className="flex">
-                <a href={project.repo} target="_blank">
-                  <AiFillGithub className="h-8 w-8" />
-                </a>
                 {project.live && (
                   <a href={project.live} target="_blank">
                     <BiSolidPointer className="h-8 w-8" />
                   </a>
                 )}
+                <a href={project.repo} target="_blank">
+                  <AiFillGithub className="h-8 w-8" />
+                </a>
               </div>
             </div>
             <p>{project.description}</p>
