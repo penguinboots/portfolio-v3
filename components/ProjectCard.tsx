@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import { titleFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -18,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="relative w-full h-48 flex flex-col items-center justify-center">
         <Image
           alt={project.title}
-          src={`/projects/previews/${project.ref}.png`}
+          src={`/projects/previews/${project.ref}.gif`}
           fill
           style={{ objectFit: "cover" }}
         />
