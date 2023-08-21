@@ -15,7 +15,7 @@ const ContactForm = () => {
     sendEmail(data);
   }
 
-  const formSectionStyles = "flex flex-col w-2/3 py-2";
+  const formSectionStyles = "flex flex-col w-full py-2 space-y-2";
   const formLabelStyles = "";
   const inputStyles = "rounded-lg p-2";
   return (
@@ -47,9 +47,9 @@ const ContactForm = () => {
             Message
           </label>
           <textarea
-            rows={6}
+            rows={12}
             placeholder="Your message..."
-            className={inputStyles}
+            className={inputStyles + " resize-none"}
             {...register("message", { required: true })}
           />
         </div>
