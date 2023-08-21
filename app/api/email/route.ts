@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     const mailOptions: Mail.Options = {
       from: process.env.MY_EMAIL,
       to: process.env.MY_EMAIL,
-      subject: `Message from ${name} (${email})`,
+      subject: `[Website Contact Form] Message from ${name} (${email})`,
       text: message,
     };
 
