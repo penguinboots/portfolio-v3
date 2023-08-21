@@ -3,7 +3,6 @@ import Image from "next/image";
 import { titleFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
-import Card from "./Card";
 import { Project } from "@/data/projects";
 
 import { AiFillGithub } from "react-icons/ai";
