@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { titleFont } from "@/lib/fonts";
 import { Project } from "@/data/projects";
 
-import Card from "./Card";
 import Link from "next/link";
 
 import { AiFillGithub } from "react-icons/ai";
@@ -27,7 +26,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   });
 
   return (
-    <Card>
+    <div className="rounded-xl overflow-hidden">
       <div className="relative bg-slate-400 h-48 md:h-64 overflow-hidden">
         <Link href={`/projects/${project.ref}`} className="h-full">
           <Image
@@ -67,7 +66,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
         </div>
         <ul className="flex flex-wrap gap-2">{stack}</ul>
       </div>
-    </Card>
+    </div>
   );
 };
 
