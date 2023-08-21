@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
@@ -9,6 +11,7 @@ import Link from "next/link";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BiSolidPointer } from "react-icons/bi";
+import DevIcon from "./DevIcon";
 
 interface FeatureCardProps {
   project: Project;
@@ -16,7 +19,7 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   const stack = project.stack.map((item) => {
-    return <li key={item}>{item}</li>;
+    return <li key={item} className="text-lg w-7 h-7"><DevIcon name={item}/></li>;
   });
 
   return (
