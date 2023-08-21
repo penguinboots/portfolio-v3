@@ -15,13 +15,14 @@ const genius: Project = {
   live: "https://lil-genius.vercel.app/",
   repo: "https://github.com/penguinboots/lil-genius",
   stack: [
+    "typescript",
     "react",
     "next",
-    "typescript",
     "tailwind",
-    "shadcn/ui",
+    "shadcn",
     "prisma",
     "stripe",
+    "vercel"
   ],
 };
 
@@ -32,7 +33,7 @@ const messenger: Project = {
     "Full-stack, real-time Messenger clone with read-receipts, group chats, and more.",
   live: "https://lil-messenger-clone.vercel.app/",
   repo: "https://github.com/penguinboots/lil-messenger-clone",
-  stack: ["react", "next", "typescript", "tailwind", "prisma", "mongodb"],
+  stack: ["typescript", "react", "next", "tailwind", "prisma", "mongodb", "vercel"],
 };
 
 const portfoliov2: Project = {
@@ -41,7 +42,7 @@ const portfoliov2: Project = {
   description: "The second iteration of my personal website.",
   live: "https://penguin-portfolio-v2.vercel.app/",
   repo: "https://github.com/penguinboots/portfolio-v2",
-  stack: ["react", "sass", "vite"],
+  stack: ["react", "sass", "vite", "vercel"],
 };
 
 const portfoliov1: Project = {
@@ -50,7 +51,7 @@ const portfoliov1: Project = {
   description: "The first iteration of my personal website.",
   live: "https://penguin-portfolio.vercel.app/",
   repo: "https://github.com/penguinboots/penguin-portfolio",
-  stack: ["react", "sass", "vite"],
+  stack: ["react", "sass", "vite", "vercel"],
 };
 
 const mimikyu: Project = {
@@ -60,7 +61,7 @@ const mimikyu: Project = {
     "Capstone Project: A pokemon-themed roguelite game. Art and design by me.",
   live: "https://mimikyus-day-off.vercel.app",
   repo: "https://github.com/penguinboots/poke-rogue",
-  stack: ["react", "next", "node", "sass", "prisma", "vercel"],
+  stack: ["javascript", "react", "next", "node", "sass", "prisma", "vercel"],
 };
 
 const shortly: Project = {
