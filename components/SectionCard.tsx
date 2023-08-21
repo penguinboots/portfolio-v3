@@ -1,10 +1,13 @@
+import { cn } from "@/lib/utils";
+
 interface SectionCardProps {
   children: React.ReactNode;
+  colour: string;
 }
 
-const SectionCard: React.FC<SectionCardProps> = ({ children }) => {
+const SectionCard: React.FC<SectionCardProps> = ({ children, colour }) => {
   return (
-    <div className="w-full sm:w-3/4 p-6 sm:p-12 sm:rounded-3xl bg-slate-300">
+    <div className={cn("w-full sm:w-4/5 max-w-5xl p-6 sm:p-12 sm:rounded-3xl", `bg-${colour}`)}>
       {children}
     </div>
   );
