@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { bodyFont } from "@/lib/fonts";
 import ToasterProvider from "@/components/ToasterProvider";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `Sabrina's Portfolio`,
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={bodyFont.className}>
+      <body className={cn("bg-slate-400", bodyFont.className)}>
         <ToasterProvider />
         {children}
       </body>
