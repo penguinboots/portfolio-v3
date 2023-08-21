@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   });
   return (
     <Card>
-      <div className="relative w-full h-48 flex flex-col items-center justify-center">
+      <div className="relative w-full min-h-48 flex flex-col items-center justify-center">
         <Image
           alt={project.title}
           src={`/projects/previews/${project.ref}.gif`}
