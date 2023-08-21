@@ -3,6 +3,7 @@ import Image from "next/image";
 import { languages, frameworks, systems, testing, other } from "@/data/skills";
 import { cn } from "@/lib/utils";
 import { titleFont } from "@/lib/fonts";
+import SectionCard from "@/components/SectionCard";
 
 interface Skill {
   img: keyof typeof devIcons;
@@ -32,33 +33,35 @@ const otherList = createSkillList(other);
 
 const skillList = "flex flex-col items-center gap-2";
 const skillHeading = cn("text-xl text-center", titleFont.className);
-const skillItem = "flex gap-3 flex-wrap justify-center";
+const skillItem = "flex gap-4 flex-wrap justify-center";
 
 const SkillsPage = () => {
   return (
-    <div className="w-full flex items-center justify-center">
-      <div className="bg-slate-200 w-full sm:w-3/4 sm:rounded-3xl p-12 sm:m-6 md:m-12 flex flex-col gap-6">
-        <div className={skillList}>
-          <h2 className={skillHeading}>Languages</h2>
-          <ul className={skillItem}>{languagesList}</ul>
+    <div className="w-full flex items-center justify-center sm:py-12">
+      <SectionCard colour="slate-200">
+        <div className="space-y-6 p-2">
+          <div className={skillList}>
+            <h2 className={skillHeading}>Languages</h2>
+            <ul className={skillItem}>{languagesList}</ul>
+          </div>
+          <div className={skillList}>
+            <h2 className={skillHeading}>Frameworks & Libraries</h2>
+            <ul className={skillItem}>{frameworksList}</ul>
+          </div>
+          <div className={skillList}>
+            <h2 className={skillHeading}>Systems & Databases</h2>
+            <ul className={skillItem}>{systemsList}</ul>
+          </div>
+          <div className={skillList}>
+            <h2 className={skillHeading}>Testing</h2>
+            <ul className={skillItem}>{testingList}</ul>
+          </div>
+          <div className={skillList}>
+            <h2 className={skillHeading}>Other</h2>
+            <ul className={skillItem}>{otherList}</ul>
+          </div>
         </div>
-        <div className={skillList}>
-          <h2 className={skillHeading}>Frameworks & Libraries</h2>
-          <ul className={skillItem}>{frameworksList}</ul>
-        </div>
-        <div className={skillList}>
-          <h2 className={skillHeading}>Systems & Databases</h2>
-          <ul className={skillItem}>{systemsList}</ul>
-        </div>
-        <div className={skillList}>
-          <h2 className={skillHeading}>Testing</h2>
-          <ul className={skillItem}>{testingList}</ul>
-        </div>
-        <div className={skillList}>
-          <h2 className={skillHeading}>Other</h2>
-          <ul className={skillItem}>{otherList}</ul>
-        </div>
-      </div>
+      </SectionCard>
     </div>
   );
 };
