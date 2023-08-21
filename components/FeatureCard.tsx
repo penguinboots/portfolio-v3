@@ -28,7 +28,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
 
   return (
     <Card>
-      <div className="relative bg-slate-400 min-h-48 h-48 md:h-64 overflow-hidden">
+      <div className="relative bg-slate-400 h-48 md:h-64 overflow-hidden">
         <Link href={`/projects/${project.ref}`}>
           <Image
             alt={project.title}
@@ -39,7 +39,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
           />
         </Link>
       </div>
-      <div className="flex flex-col justify-between p-6 min-h-48 bg-slate-300 md:h-64">
+      <div className="flex flex-col justify-between p-6 h-48 bg-slate-300 md:h-64">
         <div>
           <div className="flex justify-between items-center py-2">
             <Link href={`/projects/${project.ref}`}>
