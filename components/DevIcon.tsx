@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   SiJavascript,
@@ -25,127 +25,132 @@ import {
   SiAdobephotoshop,
   SiVite,
   SiStripe,
-  SiMongodb
+  SiMongodb,
 } from "react-icons/si";
 import { FaJava, FaSass } from "react-icons/fa";
-import Image from "next/image";
 import { devIcons } from "@/public/icons";
-import { useState } from "react";
+import Image from "next/image";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 
 interface DevIconProps {
   name: string;
 }
 
 const DevIcon: React.FC<DevIconProps> = ({ name }) => {
-  const [hover, setHover] = useState(false);
-
-  let wh = "w-full h-full"
+  let wh = "w-full h-full";
   let icon;
   let displayName;
   switch (name) {
     case "javascript":
       icon = <SiJavascript className={wh} />;
-      displayName = "";
+      displayName = "JavaScript";
       break;
     case "typescript":
       icon = <SiTypescript className={wh} />;
-      displayName = "";
+      displayName = "TypeScript";
       break;
     case "ruby":
-      icon =  <SiRuby className={wh} />;
-      displayName = "";
+      icon = <SiRuby className={wh} />;
+      displayName = "Ruby";
       break;
     case "java":
       icon = <FaJava className={wh} />;
-      displayName = "";
+      displayName = "Java";
       break;
     case "html":
       icon = <SiHtml5 className={wh} />;
-      displayName = "";
+      displayName = "HTML5";
       break;
     case "css":
       icon = <SiCss3 className={wh} />;
-      displayName = "";
+      displayName = "CSS3";
       break;
     case "node":
       icon = <SiNodedotjs className={wh} />;
-      displayName = "";
+      displayName = "NodeJS";
       break;
     case "react":
-      icon = <SiReact className={wh}/>;
-      displayName = "";
+      icon = <SiReact className={wh} />;
+      displayName = "ReactJS";
       break;
     case "next":
       icon = <SiNextdotjs className={wh} />;
-      displayName = "";
+      displayName = "NextJS";
       break;
     case "express":
       icon = <SiExpress className={wh} />;
-      displayName = "";
+      displayName = "Express";
       break;
     case "jquery":
       icon = <SiJquery className={wh} />;
-      displayName = "";
+      displayName = "jQuery";
       break;
     case "sass":
       icon = <FaSass className={wh} />;
-      displayName = "";
+      displayName = "Sass";
       break;
     case "tailwind":
       icon = <SiTailwindcss className={wh} />;
-      displayName = "";
+      displayName = "Tailwind";
       break;
     case "rails":
       icon = <SiRubyonrails className={wh} />;
-      displayName = "";
+      displayName = "Rails";
       break;
     case "postgres":
       icon = <SiPostgresql className={wh} />;
-      displayName = "";
+      displayName = "PostgreSQL";
       break;
     case "git":
       icon = <SiGit className={wh} />;
-      displayName = "";
+      displayName = "Git";
       break;
     case "prisma":
       icon = <SiPrisma className={wh} />;
-      displayName = "";
+      displayName = "Prisma";
       break;
     case "mocha":
       icon = <SiMocha className={wh} />;
-      displayName = "";
+      displayName = "Mocha";
       break;
     case "chai":
       icon = <SiChai className={wh} />;
-      displayName = "";
+      displayName = "Chai";
       break;
     case "storybook":
       icon = <SiStorybook className={wh} />;
-      displayName = "";
+      displayName = "Storybook";
       break;
     case "jest":
       icon = <SiJest className={wh} />;
-      displayName = "";
+      displayName = "Jest";
       break;
     case "cypress":
       icon = <SiCypress className={wh} />;
-      displayName = "";
+      displayName = "Cypress";
       break;
     case "rspec":
       icon = <></>;
-      displayName = "";
+      displayName = "RSpec";
       break;
     case "vercel":
       icon = <SiVercel className={wh} />;
-      displayName = "";
+      displayName = "Vercel";
       break;
     case "photoshop":
       icon = <SiAdobephotoshop className={wh} />;
-      displayName = "";
+      displayName = "Photoshop";
       break;
     case "vite":
       icon = <SiVite className={wh} />;
-      displayName = "";
+      displayName = "Vite";
       break;
     case "shadcn":
       icon = (
@@ -157,21 +162,29 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
           alt="shadcn"
         />
       );
-      displayName = "";
+      displayName = "shadcn/ui";
       break;
     case "stripe":
       icon = <SiStripe className={wh} />;
-      displayName = "";
+      displayName = "Stripe";
       break;
     case "mongodb":
       icon = <SiMongodb className={wh} />;
-      displayName = "";
+      displayName = "MongoDB";
   }
+
   return (
-  <div className="text-slate-700">
-    {icon}
-    {hover && <div></div>}
-    </div>);
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <div className="text-slate-700">{icon}</div>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{displayName}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
 };
 
 export default DevIcon;
