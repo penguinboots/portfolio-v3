@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { bodyFont } from "@/lib/fonts";
-import { Toaster } from "react-hot-toast";
+import ToasterProvider from "@/components/ToasterProvider";
 
 export const metadata: Metadata = {
   title: `Sabrina's Portfolio`,
@@ -15,8 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Toaster />
-      <body className={bodyFont.className}>{children}</body>
+      <body className={bodyFont.className}>
+        <ToasterProvider />
+        {children}
+      </body>
     </html>
   );
 }
