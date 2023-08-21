@@ -40,7 +40,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
           </div>
         </Link>
       </div>
-      <div className="flex flex-col justify-between p-6 h-48 bg-slate-300 md:h-64">
+      <div className="flex flex-col justify-between p-6 bg-slate-300 md:h-64">
         <div>
           <div className="flex justify-between items-center py-2">
             <Link href={`/projects/${project.ref}`}>
