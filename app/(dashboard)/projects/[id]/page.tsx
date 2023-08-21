@@ -9,17 +9,17 @@ const ProjectPage = () => {
   const projectRef = pathname.substring(pathname.lastIndexOf("/"));
 
   return (
-    <div className="flex h-full px-4 bg-white">
-      <div className="flex fixed bottom-4 left-4 md:hidden z-20">
+    <div className="flex h-auto px-4 bg-white">
+      <div className="hidden md:flex fixed h-full items-center">
         <Link href="/projects">
-          <div className="p-2 rounded-full bg-slate-200">
+          <div className="bg-slate-200 py-4 px-1 rounded-2xl flex items-center justify-center">
             <ChevronLeft className="w-12 h-12" />
           </div>
         </Link>
       </div>
-      <div className="hidden md:flex self-center fixed">
+      <div className="flex fixed bottom-4 left-4 md:hidden z-20">
         <Link href="/projects">
-          <div className="bg-slate-200 py-4 px-1 rounded-2xl flex items-center justify-center">
+          <div className="p-2 rounded-full bg-slate-200">
             <ChevronLeft className="w-12 h-12" />
           </div>
         </Link>
