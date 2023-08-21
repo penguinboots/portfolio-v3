@@ -1,6 +1,7 @@
 import { ContactFormData } from "@/components/Contact";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import toast from "react-hot-toast"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -15,9 +16,9 @@ export function sendEmail(data: ContactFormData) {
   })
     .then((res) => res.json())
     .then((response) => {
-      alert(response.message);
+      toast.success("Your message has been sent!")
     })
     .catch((err) => {
-      alert(err);
+      toast.error("Something went wrong! Please try again.")
     });
 }
