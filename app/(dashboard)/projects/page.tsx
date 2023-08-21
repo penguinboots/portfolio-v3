@@ -2,7 +2,8 @@ import FeatureCard from "@/components/FeatureCard";
 import ProjectCard from "@/components/ProjectCard";
 
 import {
-  portfolio,
+  portfoliov1,
+  portfoliov2,
   mimikyu,
   shortly,
   jungle,
@@ -14,7 +15,7 @@ import {
 } from "@/data/projects";
 
 const features = [mimikyu, messenger, genius]
-const projects = [bytes, shortly, jungle, scheduler, portfolio, tweeter]
+const projects = [bytes, portfoliov2, shortly, jungle, scheduler, portfoliov1, tweeter]
 
 const ProjectsPage = () => {
   return (

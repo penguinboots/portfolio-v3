@@ -35,11 +35,20 @@ const messenger: Project = {
   stack: ["react", "next", "typescript", "tailwind", "prisma", "mongodb"],
 };
 
-const portfolio: Project = {
-  title: "Portfolio Website",
+const portfoliov2: Project = {
+  title: "Portfolio Website v2",
   ref: "portfoliov2",
-  description: "This website!",
-  live: null,
+  description: "The second iteration of my personal website.",
+  live: "https://penguin-portfolio-v2.vercel.app/",
+  repo: "https://github.com/penguinboots/portfolio-v2",
+  stack: ["react", "sass", "vite"],
+};
+
+const portfoliov1: Project = {
+  title: "Portfolio Website v1",
+  ref: "portfoliov1",
+  description: "The first iteration of my personal website.",
+  live: "https://penguin-portfolio.vercel.app/",
   repo: "https://github.com/penguinboots/penguin-portfolio",
   stack: ["react", "sass", "vite"],
 };
@@ -103,7 +112,8 @@ const tweeter: Project = {
 };
 
 export {
-  portfolio,
+  portfoliov2,
+  portfoliov1,
   mimikyu,
   shortly,
   jungle,
