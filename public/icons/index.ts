@@ -24,6 +24,8 @@ import tw from "./dev_tw.svg";
 import vercel from "./dev_vercel.svg";
 import ps from "./dev_ps.svg";
 import shadcn from "./dev_shadcn.svg"
+import rspecmono from "./dev_rspec_mono.svg"
+import railsmono from "./dev_rails_mono.svg"
 
 export const devIcons = {
   css,
@@ -51,5 +53,7 @@ export const devIcons = {
   tw,
   vercel,
   ps,
-  shadcn
+  shadcn,
+  rspecmono,
+  railsmono
 };
