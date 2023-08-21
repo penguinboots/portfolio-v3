@@ -32,7 +32,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
             />
           </Link>
         </div>
-        <div className="flex flex-col justify-between p-8 bg-slate-200 h-48 md:h-64">
+        <div className="flex flex-col justify-between p-8 bg-slate-300 h-48 md:h-64">
           <div>
             <div className="flex justify-between items-center py-2">
               <h1 className={cn("text-xl", titleFont.className)}>

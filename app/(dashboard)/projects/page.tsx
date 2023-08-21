@@ -27,7 +27,7 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="w-full flex flex-col items-center bg-slate-300">
+    <div className="w-full flex flex-col items-center">
       <div className="w-full p-4 gap-4 grid grid-cols-1 sm:max-w-md lg:max-w-none lg:grid-cols-2 2xl:grid-cols-3">
         {features.map((feature) => (
           <FeatureCard key={feature.title} project={feature}/>
