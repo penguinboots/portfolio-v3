@@ -12,7 +12,6 @@ import {
   SiExpress,
   SiJquery,
   SiTailwindcss,
-  SiRubyonrails,
   SiPostgresql,
   SiGit,
   SiPrisma,
@@ -26,6 +25,7 @@ import {
   SiVite,
   SiStripe,
   SiMongodb,
+  SiBootstrap,
 } from "react-icons/si";
 import { FaJava, FaSass } from "react-icons/fa";
 import { devIcons } from "@/public/icons";
@@ -101,7 +101,15 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
       displayName = "Tailwind";
       break;
     case "rails":
-      icon = <SiRubyonrails className={wh} />;
+      icon = (
+        <Image
+          priority
+          height={50}
+          width={50}
+          src={devIcons.railsmono}
+          alt="rspec"
+        />
+      );
       displayName = "Rails";
       break;
     case "postgres":
@@ -137,8 +145,16 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
       displayName = "Cypress";
       break;
     case "rspec":
-      icon = <></>;
-      displayName = "RSpec";
+      icon = (
+        <Image
+          priority
+          height={50}
+          width={50}
+          src={devIcons.rspecmono}
+          alt="rspec"
+        />
+      );
+      displayName = "shadcn/ui";
       break;
     case "vercel":
       icon = <SiVercel className={wh} />;
@@ -171,6 +187,11 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
     case "mongodb":
       icon = <SiMongodb className={wh} />;
       displayName = "MongoDB";
+      break;
+    case "bootstrap":
+      icon = <SiBootstrap className={wh} />;
+      displayName = "Bootstrap";
+      break;
   }
 
   return (
