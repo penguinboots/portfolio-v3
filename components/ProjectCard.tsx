@@ -24,12 +24,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           style={{ objectFit: "cover" }}
         />
         <div
-          className="z-20 opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-white/80 
+          className="z-20 opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-white/95 
         flex flex-col items-center justify-center"
         >
-          <h1 className={cn("text-xl", titleFont.className)}>
+          <h1 className={cn("text-xl text-center px-2", titleFont.className)}>
             {project.title}
           </h1>
+          <p className="text-xs text-center py-1 px-6">{project.description}</p>
           <div className="flex">
             <a href={project.repo} target="_blank">
               <AiFillGithub className="h-8 w-8" />
