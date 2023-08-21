@@ -26,16 +26,18 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   });
 
   return (
-    <div className="rounded-xl overflow-hidden">
-      <div className="relative bg-slate-400 h-48 md:h-64 overflow-hidden">
-        <Link href={`/projects/${project.ref}`} className="h-full">
-          <Image
-            alt={project.title}
-            src={`/projects/previews/${project.ref}.gif`}
-            fill
-            style={{ objectFit: "cover" }}
-            className="hover:opacity-80 transition-opacity"
-          />
+    <div className="relative rounded-xl overflow-hidden">
+      <div className="bg-slate-400 h-48 md:h-64 overflow-hidden">
+        <Link href={`/projects/${project.ref}`}>
+          <div className="relative h-full w-full">
+            <Image
+              alt={project.title}
+              src={`/projects/previews/${project.ref}.gif`}
+              fill
+              style={{ objectFit: "cover" }}
+              className="hover:opacity-80 transition-opacity"
+            />
+          </div>
         </Link>
       </div>
       <div className="flex flex-col justify-between p-6 h-48 bg-slate-300 md:h-64">
