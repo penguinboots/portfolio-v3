@@ -8,12 +8,20 @@ import { Project } from "@/data/projects";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BiSolidPointer } from "react-icons/bi";
+import DevIcon from "./DevIcon";
 
 interface ProjectCardProps {
   project: Project;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const stack = project.stack.map((item) => {
+    return (
+      <li key={item} className="text-sm w-6 h-6">
+        <DevIcon name={item} />
+      </li>
+    );
+  });
   return (
     <Card>
       <div className="relative w-full h-48 flex flex-col items-center justify-center">
@@ -41,6 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               <AiFillGithub className="h-8 w-8 hover:text-slate-600" />
             </a>
           </div>
+          <ul className="flex flex-wrap space-x-2 mt-6">{stack}</ul>
         </div>
       </div>
     </Card>
