@@ -22,30 +22,38 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   return (
     <Card>
       <div>
-        <div className="relative bg-slate-500 h-48 md:h-64 overflow-hidden">
+        <div className="relative bg-slate-400 h-48 md:h-64 overflow-hidden">
           <Link href={`/projects/${project.ref}`}>
             <Image
               alt={project.title}
               src={`/projects/previews/${project.ref}.gif`}
               fill
               style={{ objectFit: "cover" }}
+              className="hover:opacity-80 transition-opacity"
             />
           </Link>
         </div>
-        <div className="flex flex-col justify-between p-8 bg-slate-300 h-48 md:h-64">
+        <div className="flex flex-col justify-between p-6 min-h-48 bg-slate-300 md:h-64">
           <div>
             <div className="flex justify-between items-center py-2">
-              <h1 className={cn("text-xl", titleFont.className)}>
-                {project.title}
-              </h1>
+              <Link href={`/projects/${project.ref}`}>
+                <h1
+                  className={cn(
+                    "text-xl  hover:text-slate-600",
+                    titleFont.className
+                  )}
+                >
+                  {project.title}
+                </h1>
+              </Link>
               <div className="flex">
                 {project.live && (
                   <a href={project.live} target="_blank">
-                    <BiSolidPointer className="h-8 w-8" />
+                    <BiSolidPointer className="h-8 w-8 hover:text-slate-600" />
                   </a>
                 )}
                 <a href={project.repo} target="_blank">
-                  <AiFillGithub className="h-8 w-8" />
+                  <AiFillGithub className="h-8 w-8 hover:text-slate-600" />
                 </a>
               </div>
             </div>

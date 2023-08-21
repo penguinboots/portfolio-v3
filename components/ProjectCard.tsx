@@ -34,11 +34,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="flex">
             {project.live && (
               <a href={project.live} target="_blank">
-                <BiSolidPointer className="h-8 w-8" />
+                <BiSolidPointer className="h-8 w-8 hover:text-slate-600" />
               </a>
             )}
             <a href={project.repo} target="_blank">
-              <AiFillGithub className="h-8 w-8" />
+              <AiFillGithub className="h-8 w-8 hover:text-slate-600" />
             </a>
           </div>
         </div>
