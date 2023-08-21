@@ -30,6 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           src={`/projects/previews/${project.ref}.gif`}
           fill
           style={{ objectFit: "cover" }}
+          className="h-full"
         />
         <div
           className="z-20 opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-white/95 

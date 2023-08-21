@@ -29,7 +29,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   return (
     <Card>
       <div className="relative bg-slate-400 h-48 md:h-64 overflow-hidden">
-        <Link href={`/projects/${project.ref}`}>
+        <Link href={`/projects/${project.ref}`} className="h-full">
           <Image
             alt={project.title}
             src={`/projects/previews/${project.ref}.gif`}
