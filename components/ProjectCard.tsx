@@ -22,13 +22,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     );
   });
   return (
-    <div className="relative w-full rounded-xl overflow-hidden min-h-min h-48 flex flex-col items-center justify-center">
+    <div className="relative w-full rounded-xl overflow-hidden h-48 flex flex-col items-center justify-center">
       <Image
         alt={project.title}
         src={`/projects/previews/${project.ref}.gif`}
         fill
         style={{ objectFit: "cover" }}
-        className="h-full"
       />
       <div
         className="z-20 opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-white/95 
