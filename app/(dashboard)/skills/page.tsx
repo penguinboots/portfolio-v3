@@ -37,7 +37,7 @@ const skillItem = "flex gap-4 flex-wrap justify-center";
 
 const SkillsPage = () => {
   return (
-    <div className="w-full flex items-center justify-center sm:py-12">
+    <div className="w-full flex items-center justify-center sm:py-8">
       <SectionCard colour="slate-200">
         <div className="space-y-6 p-2">
           <div className={skillList}>
