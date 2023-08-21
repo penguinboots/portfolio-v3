@@ -31,13 +31,13 @@ const testingList = createSkillList(testing);
 const otherList = createSkillList(other);
 
 const skillList = "flex flex-col items-center gap-2";
-const skillItem = "flex gap-3";
-const skillHeading = cn("text-xl", titleFont.className);
+const skillHeading = cn("text-xl text-center", titleFont.className);
+const skillItem = "flex gap-3 flex-wrap justify-center";
 
 const SkillsPage = () => {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="bg-slate-200 w-full rounded-xl p-12 m-6 flex flex-col gap-6">
+      <div className="bg-slate-200 w-full sm:w-3/4 sm:rounded-xl p-12 sm:m-6 md:m-12 flex flex-col gap-6">
         <div className={skillList}>
           <h2 className={skillHeading}>Languages</h2>
           <ul className={skillItem}>{languagesList}</ul>
