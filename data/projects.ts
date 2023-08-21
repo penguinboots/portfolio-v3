@@ -42,7 +42,7 @@ const portfoliov2: Project = {
   description: "The second iteration of my personal website.",
   live: "https://penguin-portfolio-v2.vercel.app/",
   repo: "https://github.com/penguinboots/portfolio-v2",
-  stack: ["react", "sass", "vite", "vercel"],
+  stack: ["javascript", "react", "sass", "vite", "vercel"],
 };
 
 const portfoliov1: Project = {
@@ -51,7 +51,7 @@ const portfoliov1: Project = {
   description: "The first iteration of my personal website.",
   live: "https://penguin-portfolio.vercel.app/",
   repo: "https://github.com/penguinboots/penguin-portfolio",
-  stack: ["react", "sass", "vite", "vercel"],
+  stack: ["javascript", "react", "sass", "vite", "vercel"],
 };
 
 const mimikyu: Project = {
@@ -71,7 +71,7 @@ const shortly: Project = {
     "URL Shortener using shrtco.de API. Views for desktop, tablet, and mobile.",
   live: "https://shortly-url-shortener-five.vercel.app",
   repo: "https://github.com/penguinboots/url-shortener",
-  stack: ["react", "sass", "vite", "vercel"],
+  stack: ["javascript", "react", "sass", "vite", "vercel"],
 };
 
 const jungle: Project = {
@@ -90,7 +90,7 @@ const scheduler: Project = {
   description: "Single-page React application to schedule interviews.",
   live: null,
   repo: "https://github.com/penguinboots/scheduler",
-  stack: ["react", "storybook", "jest", "cypress"],
+  stack: ["javascript", "react", "storybook", "jest", "cypress"],
 };
 
 const bytes: Project = {
@@ -100,7 +100,7 @@ const bytes: Project = {
     "Midterm Group Project: A full-stack food-pickup app with Twilio integration.",
   live: null,
   repo: "https://github.com/penguinboots/bytes-restaurant",
-  stack: ["ejs", "express", "node", "sass", "postgresql", "jquery"],
+  stack: ["javascript", "express", "node", "sass", "postgres", "jquery"],
 };
 
 const tweeter: Project = {
@@ -109,7 +109,7 @@ const tweeter: Project = {
   description: "A simple, single-page Twitter clone.",
   live: null,
   repo: "https://github.com/penguinboots/tweeter",
-  stack: ["jquery", "ajax", "express"],
+  stack: ["javascript", "jquery", "express"],
 };
 
 export {
