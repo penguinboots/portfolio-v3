@@ -23,6 +23,7 @@ import ts from "./dev_ts.svg";
 import tw from "./dev_tw.svg";
 import vercel from "./dev_vercel.svg";
 import ps from "./dev_ps.svg";
+import shadcn from "./dev_shadcn.svg"
 
 export const devIcons = {
   css,
@@ -49,5 +50,6 @@ export const devIcons = {
   ts,
   tw,
   vercel,
-  ps
+  ps,
+  shadcn
 };
