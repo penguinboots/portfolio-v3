@@ -66,7 +66,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
           </div>
           <p>{project.description}</p>
         </div>
-        <ul className="flex flex-wrap gap-2">{stack}</ul>
+        <ul className="flex flex-wrap gap-2 pt-6">{stack}</ul>
       </div>
     </div>
   );
