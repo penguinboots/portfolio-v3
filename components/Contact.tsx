@@ -10,7 +10,11 @@ export type ContactFormData = {
 };
 
 const ContactForm = () => {
-  const { register, handleSubmit } = useForm<ContactFormData>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormData>();
 
   function onSubmit(data: ContactFormData) {
     sendEmail(data);
@@ -19,6 +23,8 @@ const ContactForm = () => {
   const formSectionStyles = "flex flex-col w-full py-2 space-y-2";
   const formLabelStyles = "text-lg font-semibold";
   const inputStyles = "rounded-lg p-2 px-4";
+  const errorStyles = "text-xs text-red-500 h-0"
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -30,37 +36,47 @@ const ContactForm = () => {
           Name
         </label>
         <input
-          required
           type="text"
           placeholder="Michael Scott"
           className={inputStyles}
-          {...register("name", { required: true })}
+          {...register("name", { required: "Name is required." })}
         />
+        <div>
+          {errors.name && <p className={errorStyles}>{errors.name.message}</p>}
+        </div>
       </div>
       <div className={formSectionStyles}>
         <label htmlFor="email" className={formLabelStyles}>
           Email
         </label>
         <input
-          required
           type="text"
           placeholder="michael@dundermifflin.com"
           className={inputStyles}
-          {...register("email", { required: true })}
+          {...register("email", { required: "Email is required." })}
         />
+        <div>
+          {errors.email && (
+            <p className={errorStyles}>{errors.email.message}</p>
+          )}
+        </div>
       </div>
       <div className={formSectionStyles}>
         <label htmlFor="message" className={formLabelStyles}>
           Message
         </label>
         <textarea
-          required
           rows={8}
           placeholder="I learned a while back that if I do not text 911, people will not return my calls.
           Uhm... but now people always return my calls... because they think that something horrible has happened."
           className={inputStyles + " resize-none"}
-          {...register("message", { required: true })}
+          {...register("message", { required: "Message is required." })}
         />
+        <div>
+          {errors.message && (
+            <p className={errorStyles}>{errors.message.message}</p>
+          )}
+        </div>
       </div>
       <div className="w-full py-4 flex justify-center">
         <Button className="w-full sm:w-auto px-12 py-6 rounded-2xl">
