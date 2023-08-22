@@ -7,7 +7,7 @@ import { Comfortaa } from "next/font/google";
 const titleFont = Comfortaa({ weight: ["700"], subsets: ["latin"] });
 
 // Body font
-import { Manrope } from "next/font/google";
-const bodyFont = Manrope({ subsets: ["latin"] });
+import { Inter } from "next/font/google";
+const bodyFont = Inter({ subsets: ["latin"] });
 
 export { coverFont, titleFont, bodyFont };
