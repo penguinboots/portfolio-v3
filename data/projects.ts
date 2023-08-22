@@ -11,7 +11,7 @@ const genius: Project = {
   title: "Lil Genius",
   ref: "genius",
   description:
-    "A full-stack, SaaS AI platform with a free and paid tier. AI tools include chat, ref, video, music, and code generation leveraging APIs from OpenAI and Replicate.",
+    "A full-stack, SaaS AI platform with a free and paid tier. AI tools include chat, image, video, music, and code generation leveraging APIs from OpenAI and Replicate.",
   live: "https://lil-genius.vercel.app/",
   repo: "https://github.com/penguinboots/lil-genius",
   stack: [
