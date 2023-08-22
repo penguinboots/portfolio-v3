@@ -30,6 +30,7 @@ const ContactForm = () => {
           Name
         </label>
         <input
+          required
           type="text"
           placeholder="Michael Scott"
           className={inputStyles}
@@ -41,6 +42,7 @@ const ContactForm = () => {
           Email
         </label>
         <input
+          required
           type="text"
           placeholder="michael@dundermifflin.com"
           className={inputStyles}
@@ -52,6 +54,7 @@ const ContactForm = () => {
           Message
         </label>
         <textarea
+          required
           rows={8}
           placeholder="I learned a while back that if I do not text 911, people will not return my calls.
           Uhm... but now people always return my calls... because they think that something horrible has happened."
