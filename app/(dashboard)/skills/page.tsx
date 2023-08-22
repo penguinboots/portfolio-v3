@@ -1,10 +1,11 @@
-import { devIcons } from "@/public/icons";
 import Image from "next/image";
-import { languages, frameworks, systems, testing, other } from "@/data/skills";
+
 import { cn } from "@/lib/utils";
 import { titleFont } from "@/lib/fonts";
-import SectionCard from "@/components/SectionCard";
+import { devIcons } from "@/public/icons";
+import { languages, frameworks, systems, testing, other } from "@/data/skills";
 
+import SectionCard from "@/components/SectionCard";
 import {
   Tooltip,
   TooltipContent,
