@@ -8,9 +8,8 @@ import { Project } from "@/data/projects";
 
 import Link from "next/link";
 
-import { AiFillGithub } from "react-icons/ai";
-import { BiSolidPointer } from "react-icons/bi";
 import DevIcon from "./DevIcon";
+import ProjectLinks from "./ProjectLinks";
 
 interface FeatureCardProps {
   project: Project;
@@ -53,16 +52,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
                 {project.title}
               </h1>
             </Link>
-            <div className="flex">
-              {project.live && (
-                <a href={project.live} target="_blank">
-                  <BiSolidPointer className="h-8 w-8 hover:text-slate-600" />
-                </a>
-              )}
-              <a href={project.repo} target="_blank">
-                <AiFillGithub className="h-8 w-8 hover:text-slate-600" />
-              </a>
-            </div>
+            <ProjectLinks project={project} />
           </div>
           <p>{project.description}</p>
         </div>

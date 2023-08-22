@@ -5,9 +5,8 @@ import { cn } from "@/lib/utils";
 
 import { Project } from "@/data/projects";
 
-import { AiFillGithub } from "react-icons/ai";
-import { BiSolidPointer } from "react-icons/bi";
 import DevIcon from "./DevIcon";
+import ProjectLinks from "./ProjectLinks";
 
 interface ProjectCardProps {
   project: Project;
@@ -37,16 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.title}
         </h1>
         <p className="text-xs text-center py-1 px-6">{project.description}</p>
-        <div className="flex">
-          {project.live && (
-            <a href={project.live} target="_blank">
-              <BiSolidPointer className="h-8 w-8 hover:text-slate-600" />
-            </a>
-          )}
-          <a href={project.repo} target="_blank">
-            <AiFillGithub className="h-8 w-8 hover:text-slate-600" />
-          </a>
-        </div>
+        <ProjectLinks project={project} />
         <ul className="flex flex-wrap space-x-2 mt-6">{stack}</ul>
       </div>
     </div>
