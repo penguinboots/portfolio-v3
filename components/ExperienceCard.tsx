@@ -10,7 +10,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
 
   return (
     <div className="relative w-full rounded-xl overflow-hidden flex flex-col bg-slate-100 p-6">
-      <div className="flex items-center gap-4">
+      <div className="lg:flex items-center gap-4">
         <h1 className="font-bold text-xl">{exp.title}</h1>
         {exp.note && <p className="text-sm pt-1">{exp.note.toUpperCase()}</p>}
       </div>

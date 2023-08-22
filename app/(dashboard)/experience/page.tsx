@@ -9,7 +9,7 @@ const ExperiencePage = () => {
 
   return (
     <div>
-      <div className="p-6 space-y-6">{eduCards}</div>
+      <div className="p-8 space-y-6">{eduCards}</div>
     </div>
   );
 };
