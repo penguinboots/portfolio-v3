@@ -5,6 +5,13 @@ import { cn } from "@/lib/utils";
 import { titleFont } from "@/lib/fonts";
 import SectionCard from "@/components/SectionCard";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 interface Skill {
   img: keyof typeof devIcons;
   name: string;
@@ -12,16 +19,24 @@ interface Skill {
 
 const createSkillList = (skills: Skill[]) => {
   return skills.map((skill) => (
-    <li key={skill.name} className="flex flex-col items-center">
-        <Image
-          priority
-          height={50}
-          width={50}
-          src={devIcons[skill.img]}
-          alt={skill.name}
-        />
-      <p className="text-xs p-2">{skill.name}</p>
-    </li>
+    <TooltipProvider key={skill.name}>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <li key={skill.name} className="flex flex-col items-center">
+            <Image
+              priority
+              height={50}
+              width={50}
+              src={devIcons[skill.img]}
+              alt={skill.name}
+            />
+          </li>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{skill.name}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   ));
 };
 
@@ -39,7 +54,7 @@ const SkillsPage = () => {
   return (
     <div className="w-full flex items-center justify-center sm:py-8">
       <SectionCard colour="slate-300">
-        <div className="space-y-6 p-2">
+        <div className="space-y-12 p-2">
           <div className={skillList}>
             <h2 className={skillHeading}>Languages</h2>
             <ul className={skillItem}>{languagesList}</ul>
