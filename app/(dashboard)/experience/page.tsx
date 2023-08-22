@@ -1,4 +1,5 @@
 import ExperienceCard from "@/components/ExperienceCard";
+import SectionCard from "@/components/SectionCard";
 import { lighthouse, ubc } from "@/data/experience";
 
 const ExperiencePage = () => {
@@ -8,8 +9,10 @@ const ExperiencePage = () => {
   ));
 
   return (
-    <div>
-      <div className="p-8 space-y-6">{eduCards}</div>
+    <div className="w-full flex items-center justify-center sm:py-8">
+      <SectionCard colour="slate-300">
+        <div className="space-y-6">{eduCards}</div>
+      </SectionCard>
     </div>
   );
 };
