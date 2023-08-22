@@ -35,6 +35,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
               fill
               style={{ objectFit: "cover" }}
               className="hover:opacity-80 transition-opacity"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </Link>
