@@ -12,7 +12,6 @@ export interface Experience {
   desc: string;
   bullets: string[];
   icon: LucideIcon;
-  type: string;
 }
 
 export const lighthouse: Experience = {
@@ -23,7 +22,6 @@ export const lighthouse: Experience = {
   desc: "",
   bullets: ["test", "test", "test"],
   icon: GraduationCap,
-  type: "Education",
 };
 
 export const ubc: Experience = {
@@ -34,7 +32,6 @@ export const ubc: Experience = {
   desc: "",
   bullets: ["test", "test", "test"],
   icon: GraduationCap,
-  type: "Education",
 };
 
 export const apple: Experience = {
@@ -45,7 +42,6 @@ export const apple: Experience = {
   desc: "",
   bullets: ["test", "test", "test"],
   icon: SiApple,
-  type: "Work",
 };
 
 export const catch122: Experience = {
@@ -55,8 +51,7 @@ export const catch122: Experience = {
   date: "February 2020 - August 2021",
   desc: "",
   bullets: ["test", "test", "test"],
-  icon: Sandwich,
-  type: "Work",
+  icon: Sandwich
 };
 
 export const sangra: Experience = {
@@ -67,7 +62,6 @@ export const sangra: Experience = {
   desc: "",
   bullets: ["test", "test", "test"],
   icon: GoLaw,
-  type: "Work",
 };
 
 export const murphy: Experience = {
@@ -78,7 +72,6 @@ export const murphy: Experience = {
   desc: "",
   bullets: ["test", "test", "test"],
   icon: GoLaw,
-  type: "Work",
 };
 
 export const minami: Experience = {
@@ -89,5 +82,4 @@ export const minami: Experience = {
   desc: "",
   bullets: ["test", "test", "test"],
   icon: BiCake,
-  type: "Work",
 };
