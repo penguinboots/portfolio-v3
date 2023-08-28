@@ -8,6 +8,8 @@ import { Button } from "./ui/button";
 import routes from "@/lib/routes";
 import type { Route } from "../lib/routes";
 import { ExternalLink } from "lucide-react";
+import { coverFont, titleFont } from "@/lib/fonts";
+import { title } from "process";
 
 const routeArray: Route[] = Object.values(routes);
 const socials = [
@@ -32,8 +34,8 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <div className="flex flex-col items-center justify-evenly h-full bg-sidebar">
-      <div className="bg-white/10 w-36 h-36 rounded-full self-center flex items-center justify-center">
-        <h1>LOGO</h1>
+      <div className="bg-card border-base border-8 w-40 h-40 rounded-full self-center flex items-center justify-center">
+        <h1 className={cn("text-4xl text-header", coverFont.className)}>SW</h1>
       </div>
       <div className="space-y-4 p-4 flex-col w-2/3">
         {routeArray.map((route) => (
