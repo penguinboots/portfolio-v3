@@ -60,14 +60,14 @@ const Sidebar = () => {
         <div className="flex space-x-4">
           {socials.map((social) => (
             <a href={social.href} key={social.href} target="_blank">
-              <social.icon className="h-8 w-8 text-sidebar-text hover:text-sidebar-text-hover" />
+              <social.icon className="h-8 w-8 text-base hover:text-header" />
             </a>
           ))}
         </div>
         <Button
           asChild
           variant="secondary"
-          className="bg-sidebar-text hover:text-sidebar-text-hover rounded-full"
+          className="bg-base hover:bg-header text-header-text rounded-full"
         >
           <a
             href="https://flowcv.com/resume/7vgjugqk7r"
