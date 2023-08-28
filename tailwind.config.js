@@ -67,14 +67,12 @@ module.exports = {
         },
         card: {
           DEFAULT: "hsl(var(--card))",
+          bghover: "hsl(var(--card-hover))",
           text: "hsl(var(--card-text))",
           hover: "hsl(var(--card-text-hover))",
           alt: "hsl(var(--card-alt))",
           althover: "hsl(var(--card-alt-hover))",
         },
-        custom2: "hsl(var(--custom2))",
-        custom3: "hsl(var(--custom3))",
-        custom4: "hsl(var(--custom4))",
       },
       borderRadius: {
         lg: "var(--radius)",
