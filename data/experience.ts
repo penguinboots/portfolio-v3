@@ -17,7 +17,7 @@ export const lighthouse: Experience = {
   title: "Lighthouse Labs",
   note: "",
   subtitle: "Diploma - Web Development",
-  date: "June 2023",
+  date: "Graduated June 2023",
   desc: `I took the part-time flex bootcamp during my final year at UBC. At Lighthouse,
         I was able to learn alongside fellow students with diverse backgrounds and unique
         viewpoints. The bootcamp's immersive environment fostered my adaptability, problem-solving
@@ -35,7 +35,7 @@ export const ubc: Experience = {
   title: "The University of British Columbia",
   note: "graduated with distinction",
   subtitle: "Bachelor of Arts - Psychology",
-  date: "May 2023",
+  date: "Graduated May 2023",
   desc: `After some time away from university, I returned to finish my undergraduate degree majoring in psychology.
         I delved into the complexities of human behaviour, developing a deep understanding of empathy cultural sensitivity,
         and ethical reasoning. My time at UBC equipped me with a diverse toolkit of transferrable skills that I'm eager to
@@ -52,9 +52,13 @@ export const apple: Experience = {
   title: "Specialist",
   note: "",
   subtitle: "Apple",
-  date: "August 2021 - December 2021",
+  date: "August 2021 - December 2021 [Part-time]",
   desc: "",
-  bullets: ["test", "test", "test"],
+  bullets: [
+    "Delivered excellent customer service in a fast-paced environment",
+    "Effectively evaluated customer needs and positioned complete, customized solutions",
+    "test",
+  ],
   icon: SiApple,
 };
 
@@ -62,9 +66,11 @@ export const catch122: Experience = {
   title: "Expeditor",
   note: "",
   subtitle: "Catch122 Bistro",
-  date: "February 2020 - August 2021",
+  date: "February 2020 - August 2021 [Part-time]",
   desc: "",
-  bullets: ["test", "test", "test"],
+  bullets: [
+    "Facilitated effective communication between the back of house and front of house",
+  ],
   icon: Sandwich,
 };
 
@@ -79,12 +85,16 @@ export const sangra: Experience = {
 };
 
 export const murphy: Experience = {
-  title: "Legal Administrative Assistant",
+  title: "Receptionist & Legal Administrative Assistant",
   note: "",
   subtitle: "Murphy & Company LLP",
   date: "June 2019 - September 2019",
   desc: "",
-  bullets: ["test", "test", "test"],
+  bullets: [
+    "Performed annual corporate maintenance and minute book updates",
+    "Drafted and revised various legal documents",
+    "Miscellaneous administrative duties",
+  ],
   icon: GoLaw,
 };
 
@@ -94,6 +104,10 @@ export const minami: Experience = {
   subtitle: "Minami Restaurant",
   date: "March 2018 - November 2019",
   desc: "",
-  bullets: ["test", "test", "test"],
+  bullets: [
+    "Collaboratively created new and unique desserts for seasonal menus",
+    "Worked independently on specialized preparations of various recipes, upholding food safety and sanitation protocols",
+    "Maintained daily par levels and vendor orders",
+  ],
   icon: BiCake,
 };
