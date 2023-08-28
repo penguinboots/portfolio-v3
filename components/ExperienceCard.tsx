@@ -10,7 +10,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
   return (
     <div
       className="w-full lg:w-5/6 sm:rounded-2xl overflow-hidden
-                flex flex-col bg-slate-100
+                flex flex-col bg-card text-card-text
                 p-8 space-y-2"
     >
       <div className="flex flex-col">
