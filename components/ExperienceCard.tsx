@@ -22,7 +22,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
         <h1 className="font-bold text-xl">{exp.title}</h1>
         <h2 className="text-sm">{exp.subtitle.toUpperCase()}</h2>
       </div>
-      <div className="">{exp.desc}</div>
+      {exp.desc && <div className="">{exp.desc}</div>}
       <ul className="list-disc list-inside pl-2">{bulletList}</ul>
     </div>
   );
