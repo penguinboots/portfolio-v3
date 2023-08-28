@@ -25,7 +25,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   });
 
   return (
-    <div className="relative rounded-xl overflow-hidden bg-card hover:bg-card-bghover ">
+    <div className="relative rounded-xl overflow-hidden bg-card hover:bg-card-bghover drop-shadow-lg">
       <div className="bg-card-alt h-48 md:h-64 overflow-hidden">
         <Link href={`/projects/${project.ref}`}>
           <div className="relative h-full w-full">

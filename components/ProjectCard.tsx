@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     );
   });
   return (
-    <div className="relative w-full rounded-xl overflow-hidden h-48 flex flex-col items-center justify-center bg-sidebar">
+    <div className="relative w-full rounded-xl overflow-hidden h-48 flex flex-col items-center justify-center bg-sidebar drop-shadow-lg">
       <Image
         alt={project.title}
         src={`/projects/previews/${project.ref}.gif`}
