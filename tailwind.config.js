@@ -52,7 +52,10 @@ module.exports = {
         },
 
         // CUSTOM COLOUR THEMES
-        base: { DEFAULT: "hsl(var(--base))" },
+        base: {
+          DEFAULT: "hsl(var(--base))",
+          text: "hsl(var(--base-text))"
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar))",
           text: "hsl(var(--sidebar-text))",
@@ -66,6 +69,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           text: "hsl(var(--card-text))",
           hover: "hsl(var(--card-text-hover))",
+          alt: "hsl(var(--card-alt))"
         },
         custom2: "hsl(var(--custom2))",
         custom3: "hsl(var(--custom3))",
