@@ -14,7 +14,9 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
                 p-8 space-y-2"
     >
       <div className="flex flex-col">
-        <exp.icon className="w-6 h-6 mb-1" />
+        <div className="flex items-center justify-center rounded-full w-10 h-10 mb-2 bg-sidebar-light">
+          <exp.icon className="w-6 h-6 text-card" />
+        </div>
         <p className="text-sm">{exp.date.toUpperCase()}</p>
         <h1 className="font-bold text-xl">{exp.title}</h1>
         <h2 className="text-sm">{exp.subtitle.toUpperCase()}</h2>

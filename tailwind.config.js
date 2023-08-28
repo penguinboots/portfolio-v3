@@ -60,6 +60,7 @@ module.exports = {
           DEFAULT: "hsl(var(--sidebar))",
           text: "hsl(var(--sidebar-text))",
           hover: "hsl(var(--sidebar-text-hover))",
+          light: "hsl(var(--sidebar-light))"
         },
         header: {
           DEFAULT: "hsl(var(--header))",

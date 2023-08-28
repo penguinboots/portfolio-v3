@@ -43,6 +43,7 @@
     --sidebar: 120 14% 25%; /* dark-green */
     --sidebar-text: 45 70% 92%; /* light-yellow */
     --sidebar-text-hover: 45 100% 98%; /* white-yellow */
+    --sidebar-light: 120 20% 45%; /* mid-green */
 
     --header: 341 35% 60%; /* dark-pink */
     --header-text: 341 60% 18%; /* maroon-pink */

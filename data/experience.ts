@@ -1,6 +1,6 @@
 import { GraduationCap, LucideIcon, Sandwich } from "lucide-react";
 import { BiCake } from "react-icons/bi";
-import { SiApple } from "react-icons/si";
+import { TbBrandApple } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
 
 export interface Experience {
@@ -58,7 +58,7 @@ export const apple: Experience = {
     "Delivered excellent customer service in a fast-paced environment",
     "Effectively evaluated customer needs and positioned complete, customized solutions",
   ],
-  icon: SiApple,
+  icon: TbBrandApple,
 };
 
 export const catch122: Experience = {
