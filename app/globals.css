@@ -35,21 +35,22 @@
 
     --radius: 0.5rem;
 
+    /* CUSTOM COLOURS */
 
-    --custom1: 28 82% 67%;
-    --base: 341 40% 72%; /* mid pink */
+    --base: 350 38% 72%; /* med-pink */
+    --base-text: 341 60% 18%; /* maroon-pink */
 
-    --sidebar: 130 14% 31%; /* dark green */
-    --sidebar-text: 45 100% 92%; /* mid yellow */
-    --sidebar-text-hover: 45 100% 98%; /* whiteyellow */
+    --sidebar: 120 14% 25%; /* dark-green */
+    --sidebar-text: 45 100% 92%; /* light-yellow */
+    --sidebar-text-hover: 45 100% 98%; /* white-yellow */
 
-    --header: 341 40% 58%; /* dark pink */
-    --header-text: 341 100% 93%; /* darker pink */
+    --header: 341 35% 60%; /* dark-pink */
+    --header-text: 341 60% 18%; /* maroon-pink */
 
-    --card: 45 30% 87%; /* faded light yellow */
-    --card-text: 341 40% 20%; /* darker pink */
-    
-    --custom4: 75 90% 92%; 
+    --card: 45 30% 87%; /* light-yellow */
+    --card-text: 341 60% 18%; /* pink-red */
+    --card-alt: 350 40% 85%; /* light-pink */
+
   }
 
   .dark {
