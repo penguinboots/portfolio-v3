@@ -20,7 +20,7 @@ const ProjectLinks = ({project} : ProjectLinksProps) => {
           <Tooltip>
             <TooltipTrigger asChild>
               <a href={project.live} target="_blank">
-                <BiSolidPointer className="h-8 w-8 hover:text-slate-600" />
+                <BiSolidPointer className="h-8 w-8 text-card-text hover:text-card-hover transition-all" />
               </a>
             </TooltipTrigger>
             <TooltipContent>
@@ -33,7 +33,7 @@ const ProjectLinks = ({project} : ProjectLinksProps) => {
         <Tooltip>
           <TooltipTrigger asChild>
             <a href={project.repo} target="_blank">
-              <AiFillGithub className="h-8 w-8 hover:text-slate-600" />
+              <AiFillGithub className="h-8 w-8 text-card-text hover:text-card-hover transition-all" />
             </a>
           </TooltipTrigger>
           <TooltipContent>

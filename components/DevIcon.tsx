@@ -198,7 +198,7 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className="text-base-text">{icon}</div>
+          <div className="text-card-text hover:text-card-hover transition-all">{icon}</div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{displayName}</p>

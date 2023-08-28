@@ -25,8 +25,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   });
 
   return (
-    <div className="relative rounded-xl overflow-hidden">
-      <div className="bg-black h-48 md:h-64 overflow-hidden">
+    <div className="relative rounded-xl overflow-hidden bg-card-alt hover:bg-card-althover ">
+      <div className="bg-card-alt h-48 md:h-64 overflow-hidden">
         <Link href={`/projects/${project.ref}`}>
           <div className="relative h-full w-full">
             <Image
@@ -34,19 +34,19 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
               src={`/projects/previews/${project.ref}.gif`}
               fill
               style={{ objectFit: "cover" }}
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-90 transition-opacity"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </Link>
       </div>
-      <div className="flex flex-col justify-between p-6 bg-card-alt md:h-64">
+      <div className="flex flex-col justify-between p-6 md:h-64">
         <div>
           <div className="flex justify-between items-center py-2">
             <Link href={`/projects/${project.ref}`}>
               <h1
                 className={cn(
-                  "text-xl  hover:text-white/10",
+                  "text-xl hover:text-card-hover",
                   titleFont.className
                 )}
               >
