@@ -54,7 +54,7 @@ const skillItem = "flex gap-4 flex-wrap justify-center";
 const SkillsPage = () => {
   return (
     <div className="w-full flex items-center justify-center sm:py-8">
-      <SectionCard colour="slate-300">
+      <SectionCard>
         <div className="space-y-12 p-2">
           <div className={skillList}>
             <h2 className={skillHeading}>Languages</h2>

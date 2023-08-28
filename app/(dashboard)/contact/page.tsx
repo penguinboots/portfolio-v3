@@ -4,7 +4,7 @@ import SectionCard from "@/components/SectionCard";
 const ContactPage = () => {
   return (
     <div className="w-full flex items-center justify-center sm:mt-24">
-      <SectionCard colour="slate-300">
+      <SectionCard>
         <ContactForm />
       </SectionCard>
     </div>
