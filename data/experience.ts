@@ -19,8 +19,8 @@ export const lighthouse: Experience = {
   subtitle: "Diploma - Web Development",
   date: "Graduated June 2023",
   desc: `I took the part-time flex bootcamp during my final year at UBC. At Lighthouse,
-        I was able to learn alongside fellow students with diverse backgrounds and unique
-        viewpoints. The bootcamp's immersive environment fostered my adaptability, problem-solving
+        I was able to learn alongside fellow students coming from a variety of backgrounds.
+        The bootcamp's immersive environment fostered my adaptability, problem-solving
         skills, and keen attention to detail. I graduated with a renewed passion for coding and
         the practical skills to thrive in the ever-evolving landscape of tech.`,
   bullets: [
@@ -37,7 +37,7 @@ export const ubc: Experience = {
   subtitle: "Bachelor of Arts - Psychology",
   date: "Graduated May 2023",
   desc: `After some time away from university, I returned to finish my undergraduate degree majoring in psychology.
-        I delved into the complexities of human behaviour, developing a deep understanding of empathy cultural sensitivity,
+        I delved into the complexities of human behaviour, also developing a deep understanding of empathy, cultural sensitivity,
         and ethical reasoning. My time at UBC equipped me with a diverse toolkit of transferrable skills that I'm eager to
         apply to a range of professional opportunities.`,
   bullets: [
@@ -57,7 +57,6 @@ export const apple: Experience = {
   bullets: [
     "Delivered excellent customer service in a fast-paced environment",
     "Effectively evaluated customer needs and positioned complete, customized solutions",
-    "test",
   ],
   icon: SiApple,
 };
