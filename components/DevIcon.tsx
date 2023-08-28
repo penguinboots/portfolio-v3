@@ -198,7 +198,7 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className="text-slate-700">{icon}</div>
+          <div className="text-base-text">{icon}</div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{displayName}</p>

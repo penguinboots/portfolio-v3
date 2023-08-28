@@ -5,7 +5,7 @@ import { coverFont } from "@/lib/fonts";
 
 const HomePage = () => {
   return (
-    <div className="h-full">
+    <div className="h-full text-sidebar bg-card">
       <div className="h-full w-2/3 flex flex-col justify-center pl-12 space-y-4">
         <h1
           className={cn(
@@ -21,7 +21,7 @@ const HomePage = () => {
           Developer, artist, and maker of weird things.
         </p>
         <Link href="/about">
-          <Button className="w-48 font-bold">GET TO KNOW ME</Button>
+          <Button className="w-48 font-bold bg-sidebar">GET TO KNOW ME</Button>
         </Link>
       </div>
     </div>

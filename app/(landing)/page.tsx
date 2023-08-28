@@ -8,7 +8,7 @@ export default function Landing() {
       <div className="h-full flex flex-col items-center justify-center w-full p-10 gap-10">
         <h1 className="text-4xl">welcome</h1>
         <Link href="/home">
-          <Button>hello world</Button>
+          <Button className="bg-sidebar">hello world</Button>
         </Link>
       </div>
     </div>

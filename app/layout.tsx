@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("bg-base", bodyFont.className)}>
+      <body className={cn("bg-base text-base-text", bodyFont.className)}>
         <ToasterProvider />
         {children}
       </body>
