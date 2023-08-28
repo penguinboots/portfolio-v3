@@ -11,37 +11,37 @@ const routes: { [key: string]: Route } = {
   "/home": {
     label: "Home",
     icon: Home,
-    description: "/placeholder text here",
+    description: "",
     href: "/home",
   },
   "/about": {
     label: "About",
     icon: Laugh,
-    description: "/placeholder text here",
+    description: "",
     href: "/about",
   },
   "/projects": {
     label: "Projects",
     icon: FileCode,
-    description: "/placeholder text here",
+    description: "things I've made",
     href: "/projects",
   },
   "/experience": {
     label: "Experience",
     icon: ClipboardList,
-    description: "/placeholder text here",
+    description: "my not-so-entire history of at least a few years",
     href: "/experience",
   },
   "/skills": {
     label: "Skills",
     icon: Wrench,
-    description: "/placeholder text here",
+    description: "tools in the toolbox",
     href: "/skills",
   },
   "/contact": {
     label: "Contact",
     icon: Sticker,
-    description: "/placeholder text here",
+    description: "give me a ring ring ring ring",
     href: "/contact",
   },
 };
