@@ -21,7 +21,7 @@ const HomePage = () => {
           Developer, artist, and maker of weird things.
         </p>
         <Link href="/about">
-          <Button className="w-48 font-bold bg-sidebar">GET TO KNOW ME</Button>
+          <Button className="w-48 font-bold bg-base text-header-text hover:bg-header">GET TO KNOW ME</Button>
         </Link>
       </div>
     </div>
