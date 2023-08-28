@@ -31,9 +31,7 @@ const socials = [
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <div
-      className="flex flex-col items-center justify-evenly h-full bg-slate-700"
-    >
+    <div className="flex flex-col items-center justify-evenly h-full bg-sidebar">
       <div className="bg-white/10 w-36 h-36 rounded-full self-center flex items-center justify-center">
         <h1>LOGO</h1>
       </div>
@@ -46,11 +44,11 @@ const Sidebar = () => {
               `
               text-sm group flex p-2 sm:p-3 md:p-4 w-full
               justify-start font-medium cursor-pointer
-              hover:text-slate-200 hover:bg-white/10
+              hover:text-sidebar-text-hover hover:bg-white/10
               rounded-lg transition`,
               pathname.includes(route.href)
-                ? "text-slate-200 bg-white/10"
-                : "text-slate-400"
+                ? "text-sidebar-text bg-white/10"
+                : "text-sidebar-text"
             )}
           >
             <route.icon className="h-5 w-5 mr-3" />
@@ -62,14 +60,14 @@ const Sidebar = () => {
         <div className="flex space-x-4">
           {socials.map((social) => (
             <a href={social.href} key={social.href} target="_blank">
-              <social.icon className="h-8 w-8 text-slate-400" />
+              <social.icon className="h-8 w-8 text-sidebar-text hover:text-sidebar-text-hover" />
             </a>
           ))}
         </div>
         <Button
           asChild
           variant="secondary"
-          className="bg-slate-400 rounded-full"
+          className="bg-sidebar-text hover:text-sidebar-text-hover rounded-full"
         >
           <a
             href="https://flowcv.com/resume/7vgjugqk7r"
