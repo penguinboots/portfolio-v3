@@ -25,7 +25,7 @@ const ExperiencePage = () => {
   let cardSection = "flex flex-col items-center w-full space-y-3";
 
   return (
-    <div className="w-full flex flex-col items-center sm:p-4 md:px-12 y-8">
+    <div className="w-full flex flex-col items-center sm:pb-10 md:px-12">
       <h1 className={sectionTitle}>Education</h1>
       <div className={cardSection}>{eduCards}</div>
       <h1 className={sectionTitle}>Employment</h1>
