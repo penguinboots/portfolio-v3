@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -50,6 +50,26 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        // CUSTOM COLOUR THEMES
+        base: { DEFAULT: "hsl(var(--base))" },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar))",
+          text: "hsl(var(--sidebar-text))",
+          hover: "hsl(var(--sidebar-text-hover))",
+        },
+        header: {
+          DEFAULT: "hsl(var(--header))",
+          text: "hsl(var(--header-text))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          text: "hsl(var(--card-text))",
+          hover: "hsl(var(--card-text-hover))",
+        },
+        custom2: "hsl(var(--custom2))",
+        custom3: "hsl(var(--custom3))",
+        custom4: "hsl(var(--custom4))",
       },
       borderRadius: {
         lg: "var(--radius)",

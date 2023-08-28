@@ -34,6 +34,22 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+
+    --custom1: 28 82% 67%;
+    --base: 341 52% 81%; /* mid pink */
+
+    --sidebar: 130 14% 31%; /* dark green */
+    --sidebar-text: 45 100% 92%; /* mid yellow */
+    --sidebar-text-hover: 45 100% 98%; /* whiteyellow */
+
+    --header: 341 46% 66%; /* dark pink */
+    --header-text: 341 40% 20%; /* darker pink */
+
+    --card: 45 60% 92%; /* faded light yellow */
+    --card-text: 341 40% 20%; /* darker pink */
+    
+    --custom4: 75 90% 92%; 
   }
 
   .dark {
