@@ -38,6 +38,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+const hover = "hover:saturate-[.75] hover:brightness-[3] transition-all";
 
 interface DevIconProps {
   name: string;
@@ -107,7 +108,8 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
           height={50}
           width={50}
           src={devIcons.railsmono}
-          alt="rspec"
+          alt="rails"
+          className={hover}
         />
       );
       displayName = "Rails";
@@ -152,9 +154,10 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
           width={50}
           src={devIcons.rspecmono}
           alt="rspec"
+          className={hover}
         />
       );
-      displayName = "shadcn/ui";
+      displayName = "RSpec";
       break;
     case "vercel":
       icon = <SiVercel className={wh} />;
@@ -174,8 +177,9 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
           priority
           height={50}
           width={50}
-          src={devIcons.shadcn}
+          src={devIcons.shadcnmono}
           alt="shadcn"
+          className={hover}
         />
       );
       displayName = "shadcn/ui";
@@ -198,7 +202,9 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className="text-card-text hover:text-card-hover transition-all">{icon}</div>
+          <div className="text-card-text hover:text-card-hover transition-all">
+            {icon}
+          </div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{displayName}</p>

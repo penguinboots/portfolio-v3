@@ -26,6 +26,7 @@ import ps from "./dev_ps.svg";
 import shadcn from "./dev_shadcn.svg"
 import rspecmono from "./dev_rspec_mono.svg"
 import railsmono from "./dev_rails_mono.svg"
+import shadcnmono from "./dev_shadcn_mono.svg"
 
 export const devIcons = {
   css,
@@ -55,5 +56,6 @@ export const devIcons = {
   ps,
   shadcn,
   rspecmono,
-  railsmono
+  railsmono,
+  shadcnmono,
 };
