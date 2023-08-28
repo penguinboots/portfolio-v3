@@ -47,7 +47,8 @@
     --header: 341 35% 60%; /* dark-pink */
     --header-text: 341 60% 18%; /* maroon-pink */
 
-    --card: 45 30% 87%; /* light-yellow */
+    --card: 45 60% 89%; /* light-yellow */
+    --card-hover: 45 60% 92%; /* lightest-yellow */
     --card-text: 341 60% 18%; /* pink-red */
     --card-text-hover: 341 35% 50%; /* dark-pink */
     --card-alt: 350 40% 85%; /* light-pink */
