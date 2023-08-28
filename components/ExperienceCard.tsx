@@ -11,7 +11,8 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
     <div
       className="w-full lg:w-5/6 sm:rounded-2xl overflow-hidden
                 flex flex-col bg-card text-card-text
-                p-8 space-y-2"
+                p-8 space-y-2 border-l-8 border-sidebar-light
+                drop-shadow-lg"
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-center rounded-full w-10 h-10 mb-2 bg-sidebar-light">
