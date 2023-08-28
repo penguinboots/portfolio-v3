@@ -1,6 +1,7 @@
 import { LucideIcon } from "lucide-react";
-import { titleFont } from "@/lib/fonts";
+import { bodyFont, titleFont } from "@/lib/fonts";
 import Navbar from "./Navbar";
+import { cn } from "@/lib/utils";
 
 interface HeaderProps {
   title: string;
@@ -10,12 +11,12 @@ interface HeaderProps {
 
 export const Header = ({ title, desc, icon: Icon }: HeaderProps) => {
   return (
-    <div className="bg-slate-500 h-24 flex items-center justify-between p-4">
-      <div className="flex space-x-4">
-        <Icon className="w-10 h-10" />
+    <div className="bg-header text-header-text h-24 flex items-center justify-between p-4">
+      <div className="flex items-center space-x-4">
+        <Icon className="w-12 h-12" />
         <div>
-          <h1 className={titleFont.className}>{title}</h1>
-          <p>{desc}</p>
+          <h1 className={cn("text-xl pt-1", titleFont.className)}>{title}</h1>
+          <h2 className={cn("text-sm", titleFont.className)}>{desc}</h2>
         </div>
       </div>
       <div className="md:hidden">
