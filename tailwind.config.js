@@ -69,7 +69,8 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           text: "hsl(var(--card-text))",
           hover: "hsl(var(--card-text-hover))",
-          alt: "hsl(var(--card-alt))"
+          alt: "hsl(var(--card-alt))",
+          althover: "hsl(var(--card-alt-hover))",
         },
         custom2: "hsl(var(--custom2))",
         custom3: "hsl(var(--custom3))",

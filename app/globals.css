@@ -49,7 +49,9 @@
 
     --card: 45 30% 87%; /* light-yellow */
     --card-text: 341 60% 18%; /* pink-red */
+    --card-text-hover: 341 35% 50%; /* dark-pink */
     --card-alt: 350 40% 85%; /* light-pink */
+    --card-alt-hover: 350 40% 86.3%; /* lightest-pink */
 
   }
 
