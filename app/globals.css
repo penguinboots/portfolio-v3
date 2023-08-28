@@ -37,16 +37,16 @@
 
 
     --custom1: 28 82% 67%;
-    --base: 341 52% 81%; /* mid pink */
+    --base: 341 40% 72%; /* mid pink */
 
     --sidebar: 130 14% 31%; /* dark green */
     --sidebar-text: 45 100% 92%; /* mid yellow */
     --sidebar-text-hover: 45 100% 98%; /* whiteyellow */
 
-    --header: 341 46% 66%; /* dark pink */
-    --header-text: 341 40% 20%; /* darker pink */
+    --header: 341 40% 58%; /* dark pink */
+    --header-text: 341 100% 93%; /* darker pink */
 
-    --card: 45 60% 92%; /* faded light yellow */
+    --card: 45 30% 87%; /* faded light yellow */
     --card-text: 341 40% 20%; /* darker pink */
     
     --custom4: 75 90% 92%; 
