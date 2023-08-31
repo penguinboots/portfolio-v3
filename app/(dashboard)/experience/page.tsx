@@ -11,13 +11,14 @@ import {
   ubc,
 } from "@/data/experience";
 
+const education = [lighthouse, ubc];
+const work = [apple, catch122, minami, murphy];
+
 const ExperiencePage = () => {
-  let education = [lighthouse, ubc];
   let eduCards = education.map((exp) => (
     <ExperienceCard key={exp.title} exp={exp} />
   ));
 
-  let work = [apple, catch122, minami, murphy];
   let workCards = work.map((exp) => (
     <ExperienceCard key={exp.title} exp={exp} />
   ));
