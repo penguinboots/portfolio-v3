@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import { bodyFont, titleFont } from "@/lib/fonts";
+import { titleFont } from "@/lib/fonts";
 import Navbar from "./Navbar";
 import { cn } from "@/lib/utils";
 
