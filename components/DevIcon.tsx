@@ -26,6 +26,7 @@ import {
   SiStripe,
   SiMongodb,
   SiBootstrap,
+  SiFramer,
 } from "react-icons/si";
 import { FaJava, FaSass } from "react-icons/fa";
 import { devIcons } from "@/public/icons";
@@ -195,6 +196,10 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
     case "bootstrap":
       icon = <SiBootstrap className={wh} />;
       displayName = "Bootstrap";
+      break;
+    case "framer":
+      icon = <SiFramer className={wh} />;
+      displayName= "Framer Motion";
       break;
   }
 
