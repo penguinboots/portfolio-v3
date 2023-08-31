@@ -22,7 +22,7 @@ const frameworks: Skill[] = [
   { name: "JQuery", img: "jquery" },
   { name: "Sass", img: "sass" },
   { name: "Tailwind", img: "tw" },
-  {name: "Framer Motion", img: "framer"},
+  { name: "Framer Motion", img: "framer" },
   { name: "Rails", img: "rails" },
 ];
 
