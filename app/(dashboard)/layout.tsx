@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { usePathname } from "next/navigation";
 import routes from "@/lib/routes";
+import { AnimatePresence } from "framer-motion";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
@@ -37,7 +38,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
             <Navbar />
           </div>
         )}
-        {children}
+        <AnimatePresence>{children}</AnimatePresence>
       </main>
     </div>
   );

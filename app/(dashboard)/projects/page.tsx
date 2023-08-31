@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import FeatureCard from "@/components/FeatureCard";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -11,10 +15,10 @@ import {
   bytes,
   tweeter,
   messenger,
-  genius
+  genius,
 } from "@/data/projects";
 
-const features = [mimikyu, messenger, genius]
+const features = [mimikyu, messenger, genius];
 const projects = [
   bytes,
   shortly,
@@ -27,10 +31,16 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="w-full flex flex-col items-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      className="w-full flex flex-col items-center"
+    >
       <div className="w-full p-4 gap-4 grid grid-cols-1 sm:max-w-md lg:max-w-none lg:grid-cols-2 2xl:grid-cols-3">
         {features.map((feature) => (
-          <FeatureCard key={feature.title} project={feature}/>
+          <FeatureCard key={feature.title} project={feature} />
         ))}
         <div className="bg-slate-100 hidden lg:flex xl:hidden">IMAGE HERE</div>
       </div>
@@ -39,7 +49,7 @@ const ProjectsPage = () => {
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

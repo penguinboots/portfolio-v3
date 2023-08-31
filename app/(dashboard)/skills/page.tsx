@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
@@ -53,7 +57,13 @@ const skillItem = "flex gap-4 flex-wrap justify-center";
 
 const SkillsPage = () => {
   return (
-    <div className="w-full flex items-center justify-center sm:py-8">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      className="w-full flex items-center justify-center sm:py-8"
+    >
       <SectionCard>
         <div className="space-y-12 p-2">
           <div className={skillList}>
@@ -78,7 +88,7 @@ const SkillsPage = () => {
           </div>
         </div>
       </SectionCard>
-    </div>
+    </motion.div>
   );
 };
 

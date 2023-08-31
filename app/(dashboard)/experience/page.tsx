@@ -1,5 +1,7 @@
+"use client";
+import { motion } from "framer-motion";
+
 import ExperienceCard from "@/components/ExperienceCard";
-import SectionCard from "@/components/SectionCard";
 import {
   apple,
   catch122,
@@ -25,12 +27,18 @@ const ExperiencePage = () => {
   let cardSection = "flex flex-col items-center w-full space-y-3";
 
   return (
-    <div className="w-full flex flex-col items-center sm:pb-10 md:px-12">
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 0.5 }}
+      className="w-full flex flex-col items-center sm:pb-10 md:px-12"
+    >
       <h1 className={sectionTitle}>Education</h1>
       <div className={cardSection}>{eduCards}</div>
       <h1 className={sectionTitle}>Employment</h1>
       <div className={cardSection}>{workCards}</div>
-    </div>
+    </motion.div>
   );
 };
 
