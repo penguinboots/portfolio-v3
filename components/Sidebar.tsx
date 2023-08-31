@@ -47,7 +47,7 @@ const Sidebar = () => {
               text-sm group flex p-2 sm:p-3 md:p-4 w-full
               justify-start font-medium cursor-pointer
               hover:text-sidebar-text-hover hover:bg-white/10
-              rounded-lg transition`,
+              rounded-lg transition-all`,
               pathname.includes(route.href)
                 ? "text-sidebar-text bg-white/10"
                 : "text-sidebar-text"
