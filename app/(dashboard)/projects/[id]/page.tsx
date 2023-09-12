@@ -16,7 +16,7 @@ const ProjectPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        className="flex h-auto bg-white px-4"
+        className="flex h-auto bg-card-bghover px-4"
       >
         {/* DESKTOP BACK */}
         <motion.div
@@ -27,7 +27,7 @@ const ProjectPage = () => {
           className="fixed hidden h-full items-center md:flex"
         >
           <Link href="/projects">
-            <div className="flex items-center justify-center rounded-2xl bg-slate-200 px-1 py-4">
+            <div className="flex items-center justify-center rounded-3xl bg-base px-1 py-4 text-card transition-all hover:bg-header">
               <ChevronLeft className="h-12 w-12" />
             </div>
           </Link>
@@ -41,7 +41,7 @@ const ProjectPage = () => {
           className="fixed bottom-4 left-4 z-30 flex md:hidden"
         >
           <Link href="/projects">
-            <div className="rounded-full bg-slate-200 p-2">
+            <div className="rounded-full bg-base p-2 text-card">
               <ChevronLeft className="h-12 w-12" />
             </div>
           </Link>
