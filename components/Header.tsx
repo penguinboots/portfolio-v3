@@ -72,7 +72,7 @@ export const Header = () => {
         className={cn(
           `absolute flex w-full flex-col overflow-hidden border-b-[3px] border-solid
           border-card bg-sidebar text-sidebar-text transition-all
-          duration-500 md:border-none md:bg-header md:text-header-text`,
+          duration-500 md:border-none md:bg-header md:text-header-text bg-gradient-to-b from-sidebar-grad md:from-header-grad`,
           [
             isOpen ? "h-screen" : "h-24 ",
             (home || pView) && !isOpen ? "h-0 border-none" : "",

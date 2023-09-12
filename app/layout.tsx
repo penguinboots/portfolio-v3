@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("bg-base bg-gradient-to-t from-header-grad via-base bg-fixed text-base-text", bodyFont.className)}>
+      <body className={cn("bg-base bg-gradient-to-t from-base-grad via-base bg-fixed text-base-text", bodyFont.className)}>
         <ToasterProvider />
         {children}
       </body>
