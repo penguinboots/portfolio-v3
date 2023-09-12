@@ -12,7 +12,7 @@ const ContactPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "easeOut", duration: 1 }}
-      className="w-full flex items-center justify-center sm:mt-24"
+      className="flex w-full items-center justify-center sm:mt-24"
     >
       <SectionCard>
         <ContactForm />

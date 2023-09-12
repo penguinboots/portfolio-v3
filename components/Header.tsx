@@ -49,20 +49,20 @@ export const Header = () => {
   return (
     <div
       className={cn(
-        "absolute w-full bg-sidebar md:bg-header text-sidebar-text md:text-header-text flex flex-col transition-all duration-500 overflow-hidden",
-        isOpen ? "h-screen" : "h-24"
+        "absolute flex w-full flex-col overflow-hidden bg-sidebar text-sidebar-text transition-all duration-500 md:bg-header md:text-header-text",
+        isOpen ? "h-screen" : "h-24",
       )}
     >
       <div className="flex">
         <div
           className={cn(
-            "flex items-center h-24 p-6 transition-all duration-500 gap-2",
-            isOpen ? "opacity-0" : "opacity-100"
+            "flex h-24 items-center gap-2 p-6 transition-all duration-500",
+            isOpen ? "opacity-0" : "opacity-100",
           )}
         >
-          <Icon className="w-12 h-12" />
+          <Icon className="h-12 w-12" />
           <div>
-            <h1 className={cn("text-xl pt-1", titleFont.className)}>
+            <h1 className={cn("pt-1 text-xl", titleFont.className)}>
               {routes[pathname].label}
             </h1>
             <h2 className={cn("text-sm", titleFont.className)}>
@@ -70,15 +70,15 @@ export const Header = () => {
             </h2>
           </div>
         </div>
-        <div className="md:hidden w-full h-full absolute right-0 top-0">
+        <div className="absolute right-0 top-0 h-full w-full md:hidden">
           <div className="flex items-center justify-end">
-            <div className="p-6 transition-all duration-300 text-sidebar-text">
+            <div className="p-6 text-sidebar-text transition-all duration-300">
               <Hamburger toggled={isOpen} toggle={setIsOpen} />
             </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col h-full justify-between">
+      <div className="flex h-full flex-col justify-between">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -86,7 +86,7 @@ export const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ ease: "linear", duration: 0.5 }}
-              className="w-full flex flex-col items-center sm:pb-10 md:px-12 z-30"
+              className="z-30 flex w-full flex-col items-center sm:pb-10 md:px-12"
             >
               {routeArray.map((route) => (
                 <Link
@@ -94,13 +94,13 @@ export const Header = () => {
                   key={route.href}
                   className={cn(
                     `
-                  text-xl flex justify-center p-4 w-2/3
-                  font-medium cursor-pointer
-                  hover:text-sidebar-text-hover hover:bg-white/10
-                  rounded-lg transition-all`,
+                  hover:text-sidebar-text-hover flex w-2/3 cursor-pointer justify-center
+                  rounded-lg p-4
+                  text-xl font-medium
+                  transition-all hover:bg-white/10`,
                     pathname.includes(route.href)
-                      ? "text-sidebar-text bg-white/10"
-                      : "text-sidebar-text"
+                      ? "bg-white/10 text-sidebar-text"
+                      : "text-sidebar-text",
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -118,14 +118,14 @@ export const Header = () => {
                 <Button
                   asChild
                   variant="secondary"
-                  className="bg-base hover:bg-header text-header-text rounded-full"
+                  className="rounded-full bg-base text-header-text hover:bg-header"
                 >
                   <a
                     href="https://flowcv.com/resume/7vgjugqk7r"
                     target="_blank"
-                    className="flex gap-1 items-center justify-center"
+                    className="flex items-center justify-center gap-1"
                   >
-                    Resume <ExternalLink className="w-3 h-3" />
+                    Resume <ExternalLink className="h-3 w-3" />
                   </a>
                 </Button>
               </div>

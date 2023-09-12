@@ -32,32 +32,32 @@ const socials = [
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="flex flex-col items-center justify-evenly h-full bg-sidebar">
-      <div className="bg-card border-base border-4 w-40 h-40 rounded-full self-center flex items-center justify-center">
-        <PiFlowerLotusDuotone className="w-28 h-28 text-base" />
+    <div className="flex h-full flex-col items-center justify-evenly bg-sidebar">
+      <div className="flex h-40 w-40 items-center justify-center self-center rounded-full border-4 border-base bg-card">
+        <PiFlowerLotusDuotone className="h-28 w-28 text-base" />
       </div>
-      <div className="space-y-4 p-4 flex-col w-2/3">
+      <div className="w-2/3 flex-col space-y-4 p-4">
         {routeArray.map((route) => (
           <Link
             href={route.href}
             key={route.href}
             className={cn(
               `
-              text-sm group flex p-2 sm:p-3 md:p-4 w-full
-              justify-start font-medium cursor-pointer
-              hover:text-sidebar-text-hover hover:bg-white/10
-              rounded-lg transition-all`,
+              hover:text-sidebar-text-hover group flex w-full cursor-pointer justify-start rounded-lg
+              p-2 text-sm font-medium
+              transition-all hover:bg-white/10
+              sm:p-3 md:p-4`,
               pathname.includes(route.href)
-                ? "text-sidebar-text bg-white/10"
-                : "text-sidebar-text"
+                ? "bg-white/10 text-sidebar-text"
+                : "text-sidebar-text",
             )}
           >
-            <route.icon className="h-5 w-5 mr-3" />
+            <route.icon className="mr-3 h-5 w-5" />
             {route.label}
           </Link>
         ))}
       </div>
-      <div className="space-y-4 flex flex-col items-center">
+      <div className="flex flex-col items-center space-y-4">
         <div className="flex space-x-4">
           {socials.map((social) => (
             <a href={social.href} key={social.href} target="_blank">
@@ -68,14 +68,14 @@ const Sidebar = () => {
         <Button
           asChild
           variant="secondary"
-          className="bg-base hover:bg-header text-header-text rounded-full"
+          className="rounded-full bg-base text-header-text hover:bg-header"
         >
           <a
             href="https://flowcv.com/resume/7vgjugqk7r"
             target="_blank"
-            className="flex gap-1 items-center justify-center"
+            className="flex items-center justify-center gap-1"
           >
-            Resume <ExternalLink className="w-3 h-3" />
+            Resume <ExternalLink className="h-3 w-3" />
           </a>
         </Button>
       </div>

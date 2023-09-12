@@ -33,7 +33,7 @@ const ExperiencePage = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "easeOut", duration: 0.5 }}
-      className="w-full flex flex-col items-center sm:pb-10 md:px-12"
+      className="flex w-full flex-col items-center sm:pb-10 md:px-12"
     >
       <h1 className={sectionTitle}>Education</h1>
       <div className={cardSection}>{eduCards}</div>

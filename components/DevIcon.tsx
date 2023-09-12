@@ -199,7 +199,7 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
       break;
     case "framer":
       icon = <SiFramer className={wh} />;
-      displayName= "Framer Motion";
+      displayName = "Framer Motion";
       break;
   }
 
@@ -207,7 +207,7 @@ const DevIcon: React.FC<DevIconProps> = ({ name }) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className="text-card-text hover:text-card-hover transition-all">
+          <div className="text-card-text transition-all hover:text-card-hover">
             {icon}
           </div>
         </TooltipTrigger>

@@ -9,23 +9,23 @@ const ProjectPage = () => {
   const projectRef = pathname.substring(pathname.lastIndexOf("/"));
 
   return (
-    <div className="flex h-auto px-4 bg-white">
-      <div className="hidden md:flex fixed h-full items-center">
+    <div className="flex h-auto bg-white px-4">
+      <div className="fixed hidden h-full items-center md:flex">
         <Link href="/projects">
-          <div className="bg-slate-200 py-4 px-1 rounded-2xl flex items-center justify-center">
-            <ChevronLeft className="w-12 h-12" />
+          <div className="flex items-center justify-center rounded-2xl bg-slate-200 px-1 py-4">
+            <ChevronLeft className="h-12 w-12" />
           </div>
         </Link>
       </div>
-      <div className="flex fixed bottom-4 left-4 md:hidden">
+      <div className="fixed bottom-4 left-4 flex md:hidden">
         <Link href="/projects">
-          <div className="p-2 rounded-full bg-slate-200">
-            <ChevronLeft className="w-12 h-12" />
+          <div className="rounded-full bg-slate-200 p-2">
+            <ChevronLeft className="h-12 w-12" />
           </div>
         </Link>
       </div>
-      <div className="flex flex-col items-center w-full">
-        <div className="md:w-3/4 lg:w-2/3 md:py-12">
+      <div className="flex w-full flex-col items-center">
+        <div className="md:w-3/4 md:py-12 lg:w-2/3">
           <MarkdownRenderer filePath={`${projectRef}.md`} />
         </div>
       </div>

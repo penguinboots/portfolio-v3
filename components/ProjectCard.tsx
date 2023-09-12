@@ -15,13 +15,13 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const stack = project.stack.map((item) => {
     return (
-      <li key={item} className="text-sm w-6 h-6">
+      <li key={item} className="h-6 w-6 text-sm">
         <DevIcon name={item} />
       </li>
     );
   });
   return (
-    <div className="relative w-full rounded-xl overflow-hidden h-48 flex flex-col items-center justify-center bg-sidebar drop-shadow-lg">
+    <div className="relative flex h-48 w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-sidebar drop-shadow-lg">
       <Image
         alt={project.title}
         src={`/projects/previews/${project.ref}.gif`}
@@ -30,15 +30,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <div
-        className="opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-card-bghover/95 
-        flex flex-col items-center justify-center"
+        className="flex h-full w-full flex-col items-center justify-center 
+        bg-card-bghover/95 opacity-0 transition-opacity hover:opacity-100"
       >
-        <h1 className={cn("text-xl text-center px-2", titleFont.className)}>
+        <h1 className={cn("px-2 text-center text-xl", titleFont.className)}>
           {project.title}
         </h1>
-        <p className="text-xs text-center py-1 px-6">{project.description}</p>
+        <p className="px-6 py-1 text-center text-xs">{project.description}</p>
         <ProjectLinks project={project} />
-        <ul className="flex flex-wrap space-x-2 mt-6">{stack}</ul>
+        <ul className="mt-6 flex flex-wrap space-x-2">{stack}</ul>
       </div>
     </div>
   );

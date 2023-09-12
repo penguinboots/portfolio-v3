@@ -10,18 +10,18 @@ import { Button } from "@/components/ui/button";
 
 const HomePage = () => {
   return (
-    <div className="h-full text-sidebar bg-card">
+    <div className="h-full bg-card text-sidebar">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, x: 50 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="h-full w-2/3 flex flex-col justify-center pl-12 space-y-4"
+        className="flex h-full w-2/3 flex-col justify-center space-y-4 pl-12"
       >
         <h1
           className={cn(
-            "text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-bold",
-            coverFont.className
+            "space-y-5 text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl",
+            coverFont.className,
           )}
         >
           Hello there,
@@ -32,7 +32,7 @@ const HomePage = () => {
           Developer, artist, and maker of weird things.
         </p>
 
-        <Button className="w-48 font-bold bg-base text-header-text hover:bg-header">
+        <Button className="w-48 bg-base font-bold text-header-text hover:bg-header">
           <Link href="/about" className="w-auto">
             GET TO KNOW ME
           </Link>

@@ -9,21 +9,21 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
 
   return (
     <div
-      className="w-full lg:w-5/6 sm:rounded-2xl overflow-hidden
-                flex flex-col bg-card text-card-text
-                p-8 space-y-2 border-l-8 border-sidebar-light
-                drop-shadow-lg"
+      className="flex w-full flex-col space-y-2
+                overflow-hidden border-l-8 border-sidebar-light bg-card
+                p-8 text-card-text drop-shadow-lg sm:rounded-2xl
+                lg:w-5/6"
     >
       <div className="flex flex-col">
-        <div className="flex items-center justify-center rounded-full w-10 h-10 mb-2 bg-sidebar-light">
-          <exp.icon className="w-6 h-6 text-card" />
+        <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-sidebar-light">
+          <exp.icon className="h-6 w-6 text-card" />
         </div>
         <p className="text-sm">{exp.date.toUpperCase()}</p>
-        <h1 className="font-bold text-xl">{exp.title}</h1>
+        <h1 className="text-xl font-bold">{exp.title}</h1>
         <h2 className="text-sm">{exp.subtitle.toUpperCase()}</h2>
       </div>
       {exp.desc && <div className="">{exp.desc}</div>}
-      <ul className="list-disc list-inside pl-2">{bulletList}</ul>
+      <ul className="list-inside list-disc pl-2">{bulletList}</ul>
     </div>
   );
 };

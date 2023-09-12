@@ -18,15 +18,15 @@ interface FeatureCardProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   const stack = project.stack.map((item) => {
     return (
-      <li key={item} className="text-lg w-7 h-7">
+      <li key={item} className="h-7 w-7 text-lg">
         <DevIcon name={item} />
       </li>
     );
   });
 
   return (
-    <div className="relative rounded-xl overflow-hidden bg-card hover:bg-card-bghover drop-shadow-lg">
-      <div className="bg-card-alt h-48 md:h-64 overflow-hidden">
+    <div className="relative overflow-hidden rounded-xl bg-card drop-shadow-lg hover:bg-card-bghover">
+      <div className="h-48 overflow-hidden bg-card-alt md:h-64">
         <Link href={`/projects/${project.ref}`}>
           <div className="relative h-full w-full">
             <Image
@@ -34,7 +34,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
               src={`/projects/previews/${project.ref}.gif`}
               fill
               style={{ objectFit: "cover" }}
-              className="hover:opacity-90 transition-opacity"
+              className="transition-opacity hover:opacity-90"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
@@ -42,12 +42,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
       </div>
       <div className="flex flex-col justify-between p-6 md:h-64">
         <div>
-          <div className="flex justify-between items-center py-2">
+          <div className="flex items-center justify-between py-2">
             <Link href={`/projects/${project.ref}`}>
               <h1
                 className={cn(
                   "text-xl hover:text-card-hover",
-                  titleFont.className
+                  titleFont.className,
                 )}
               >
                 {project.title}

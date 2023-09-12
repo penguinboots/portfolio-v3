@@ -11,7 +11,7 @@ const AboutPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "easeOut", duration: 1 }}
-      className="w-full flex items-center justify-center sm:py-8"
+      className="flex w-full items-center justify-center sm:py-8"
     >
       <SectionCard>
         <h1>Placeholder placeholder</h1>

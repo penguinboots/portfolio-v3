@@ -12,7 +12,7 @@ interface ProjectLinksProps {
   project: Project;
 }
 
-const ProjectLinks = ({project} : ProjectLinksProps) => {
+const ProjectLinks = ({ project }: ProjectLinksProps) => {
   return (
     <div className="flex">
       {project.live && (
@@ -20,7 +20,7 @@ const ProjectLinks = ({project} : ProjectLinksProps) => {
           <Tooltip>
             <TooltipTrigger asChild>
               <a href={project.live} target="_blank">
-                <BiSolidPointer className="h-8 w-8 text-card-text hover:text-card-hover transition-all" />
+                <BiSolidPointer className="h-8 w-8 text-card-text transition-all hover:text-card-hover" />
               </a>
             </TooltipTrigger>
             <TooltipContent>
@@ -33,7 +33,7 @@ const ProjectLinks = ({project} : ProjectLinksProps) => {
         <Tooltip>
           <TooltipTrigger asChild>
             <a href={project.repo} target="_blank">
-              <AiFillGithub className="h-8 w-8 text-card-text hover:text-card-hover transition-all" />
+              <AiFillGithub className="h-8 w-8 text-card-text transition-all hover:text-card-hover" />
             </a>
           </TooltipTrigger>
           <TooltipContent>
