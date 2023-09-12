@@ -7,8 +7,18 @@ import { coverFont } from "@/lib/fonts";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <div className="h-full bg-card text-sidebar">
       <motion.div
@@ -21,7 +31,7 @@ const HomePage = () => {
         <h1
           className={cn(
             "space-y-5 text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl",
-            coverFont.className,
+            coverFont.className
           )}
         >
           Hello there,
