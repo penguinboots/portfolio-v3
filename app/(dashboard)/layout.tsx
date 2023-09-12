@@ -1,6 +1,6 @@
 "use client";
 import { Header } from "@/components/Header";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/HamMenu";
 import Sidebar from "@/components/Sidebar";
 import { usePathname } from "next/navigation";
 import routes from "@/lib/routes";
@@ -20,24 +20,18 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         lg:w-96
         md:flex-col 
         md:fixed 
-        md:inset-y-0
-        z-50"
+        md:inset-y-0"
       >
         <Sidebar />
       </div>
-      <main className="md:pl-72 lg:pl-96 h-full w-full z-10">
-        {pathname !== "/home" && pathname.indexOf("/", 1) === -1 && (
-          <Header
-            title={routes[pathname].label}
-            desc={routes[pathname].description}
-            icon={routes[pathname].icon}
-          />
-        )}
-        {pathname === "/home" && (
-          <div className="absolute right-0 top-0 md:hidden p-4">
-            <Navbar />
-          </div>
-        )}
+      <div className="absolute top-0 left-0 w-full z-20">
+        <Header
+          title={routes[pathname].label}
+          desc={routes[pathname].description}
+          icon={routes[pathname].icon}
+        />
+      </div>
+      <main className="md:pl-72 lg:pl-96 h-full w-full pt-24">
         <AnimatePresence>{children}</AnimatePresence>
       </main>
     </div>
