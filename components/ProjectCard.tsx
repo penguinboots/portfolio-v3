@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <div
-        className="z-20 opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-card-bghover/95 
+        className="opacity-0 hover:opacity-100 transition-opacity h-full w-full bg-card-bghover/95 
         flex flex-col items-center justify-center"
       >
         <h1 className={cn("text-xl text-center px-2", titleFont.className)}>
