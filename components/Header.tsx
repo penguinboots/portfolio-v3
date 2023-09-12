@@ -44,9 +44,14 @@ export const Header = () => {
   if (!isMounted) {
     return null;
   }
-  let Icon = routes[pathname].icon;
-  let home = pathname === "/home";
 
+  let Icon;
+  let home = pathname === "/home";
+  let pView = pathname.lastIndexOf("/") !== 0;
+
+  if (!pView) {
+    Icon = routes[pathname].icon;
+  }
   return (
     <>
       {/* HAMBURGER ICON */}
@@ -65,10 +70,13 @@ export const Header = () => {
       {/* HEADER BODY */}
       <div
         className={cn(
-          `absolute flex w-full flex-col overflow-hidden bg-sidebar text-sidebar-text
-          transition-all duration-500 md:bg-header md:text-header-text
-          border-b-[3px] border-solid border-card md:border-none`,
-          [isOpen ? "h-screen" : "h-24 ", home && !isOpen ? "h-0" : ""],
+          `absolute flex w-full flex-col overflow-hidden border-b-[3px] border-solid
+          border-card bg-sidebar text-sidebar-text transition-all
+          duration-500 md:border-none md:bg-header md:text-header-text`,
+          [
+            isOpen ? "h-screen" : "h-24 ",
+            home || (pView && !isOpen) ? "h-0" : "",
+          ],
         )}
       >
         {/* PATH ICON & TITLE */}
@@ -80,15 +88,15 @@ export const Header = () => {
             )}
           >
             <AnimatePresence>
-              {!home && (
+              {!home && !pView && (
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5}}
+                  transition={{ duration: 0.5 }}
                   className="flex gap-2"
                 >
-                  <Icon className="h-12 w-12" />
+                  {Icon && <Icon className="h-12 w-12" />}
                   <div>
                     <h1 className={cn("pt-1 text-xl", titleFont.className)}>
                       {routes[pathname].label}

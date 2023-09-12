@@ -33,7 +33,14 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="absolute right-0 top-0 z-20 w-full drop-shadow-[0_2px_5px_rgba(156,84,107,0.25)] md:relative">
           <Header />
         </div>
-        <div className={cn("h-full", pathname === "/home" ? "pt-0" : "pt-24")}>
+        <div
+          className={cn(
+            "h-full",
+            pathname === "/home" || pathname.lastIndexOf("/") !== 0
+              ? "pt-0"
+              : "pt-24",
+          )}
+        >
           <AnimatePresence>{children}</AnimatePresence>
         </div>
       </main>
