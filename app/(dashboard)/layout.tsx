@@ -1,14 +1,9 @@
 "use client";
 import { Header } from "@/components/Header";
-import Navbar from "@/components/HamMenu";
 import Sidebar from "@/components/Sidebar";
-import { usePathname } from "next/navigation";
-import routes from "@/lib/routes";
 import { AnimatePresence } from "framer-motion";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname();
-
   return (
     <div className="h-full relative flex flex-col">
       <div
