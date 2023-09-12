@@ -17,7 +17,7 @@ const routes: { [key: string]: Route } = {
   "/about": {
     label: "About",
     icon: Laugh,
-    description: "",
+    description: "all about me!",
     href: "/about",
   },
   "/projects": {
@@ -29,19 +29,19 @@ const routes: { [key: string]: Route } = {
   "/experience": {
     label: "Experience",
     icon: ClipboardList,
-    description: "my not-so-entire history of at least a few years",
+    description: "what I've been up to",
     href: "/experience",
   },
   "/skills": {
     label: "Skills",
     icon: Wrench,
-    description: "tools in the toolbox",
+    description: "stuff I've worked with",
     href: "/skills",
   },
   "/contact": {
     label: "Contact",
     icon: Sticker,
-    description: "give me a ring ring ring ring",
+    description: "shoot me a line",
     href: "/contact",
   },
 };
