@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import ContactForm from "@/components/Contact";
+import ContactForm from "@/components/ContactForm";
 import SectionCard from "@/components/SectionCard";
 
 const ContactPage = () => {
