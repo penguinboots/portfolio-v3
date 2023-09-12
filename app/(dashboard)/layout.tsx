@@ -23,7 +23,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="absolute right-0 top-0 z-20 w-full md:relative">
           <Header />
         </div>
-        <div className="pt-24">
+        <div className="pt-24 h-full">
           <AnimatePresence>{children}</AnimatePresence>
         </div>
       </main>
