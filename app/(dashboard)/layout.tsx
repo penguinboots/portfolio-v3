@@ -30,7 +30,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar />
       </div>
       <main className="h-full w-full md:pl-72 lg:pl-96">
-        <div className="absolute right-0 top-0 z-20 w-full drop-shadow-[0_2px_5px_rgba(156,84,107,0.25)] md:relative">
+        <div className="fixed right-0 top-0 z-20 w-full drop-shadow-[0_2px_5px_rgba(156,84,107,0.25)] md:relative">
           <Header />
         </div>
         <div
