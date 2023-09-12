@@ -1,9 +1,13 @@
 "use client";
 import { Header } from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
+import { cn } from "@/lib/utils";
 import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+    const pathname = usePathname();
+
   return (
     <div className="relative flex h-full flex-col">
       <div
@@ -23,7 +27,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="absolute right-0 top-0 z-20 w-full md:relative">
           <Header />
         </div>
-        <div className="pt-24 h-full">
+        <div className={cn("h-full", pathname === "/home" ? "pt-0" : "pt-24")}>
           <AnimatePresence>{children}</AnimatePresence>
         </div>
       </main>
