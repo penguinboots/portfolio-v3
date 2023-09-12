@@ -65,6 +65,7 @@ module.exports = {
         header: {
           DEFAULT: "hsl(var(--header))",
           text: "hsl(var(--header-text))",
+          grad: "hsl(var(--header-grad))"
         },
         card: {
           DEFAULT: "hsl(var(--card))",
