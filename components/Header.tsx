@@ -65,7 +65,9 @@ export const Header = () => {
       {/* HEADER BODY */}
       <div
         className={cn(
-          "absolute flex w-full flex-col overflow-hidden bg-sidebar text-sidebar-text  transition-all duration-500 md:bg-header md:text-header-text",
+          `absolute flex w-full flex-col overflow-hidden bg-sidebar text-sidebar-text
+          transition-all duration-500 md:bg-header md:text-header-text
+          border-b-[3px] border-solid border-card md:border-none`,
           [isOpen ? "h-screen" : "h-24 ", home && !isOpen ? "h-0" : ""],
         )}
       >
