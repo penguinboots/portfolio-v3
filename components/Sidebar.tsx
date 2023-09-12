@@ -3,7 +3,6 @@ import { usePathname } from "next/navigation";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { PiFlowerLotusDuotone } from "react-icons/pi";
 
-
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -35,7 +34,7 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col items-center justify-evenly h-full bg-sidebar">
       <div className="bg-card border-base border-4 w-40 h-40 rounded-full self-center flex items-center justify-center">
-        <PiFlowerLotusDuotone className="w-28 h-28 text-base"/>
+        <PiFlowerLotusDuotone className="w-28 h-28 text-base" />
       </div>
       <div className="space-y-4 p-4 flex-col w-2/3">
         {routeArray.map((route) => (
