@@ -3,7 +3,7 @@ import { LucideIcon } from "lucide-react";
 import { titleFont } from "@/lib/fonts";
 import HamMenu from "./HamMenu";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import routes from "@/lib/routes";
@@ -12,6 +12,7 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Hamburger from "hamburger-react";
 
 const routeArray: Route[] = Object.values(routes);
 const socials = [
@@ -34,7 +35,16 @@ const socials = [
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   let title = routes[pathname].label;
   let desc = routes[pathname].description;
@@ -61,7 +71,11 @@ export const Header = () => {
           </div>
         </div>
         <div className="md:hidden w-full h-full absolute right-0 top-0">
-          <HamMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+          <div className="flex items-center justify-end">
+            <div className="p-6">
+              <Hamburger toggled={isOpen} toggle={setIsOpen} />
+            </div>
+          </div>
         </div>
       </div>
       <AnimatePresence>
