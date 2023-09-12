@@ -7,10 +7,10 @@ import SectionCard from "@/components/SectionCard";
 const AboutPage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ ease: "easeOut", duration: 1 }}
+      transition={{ ease: "easeOut", duration: 0.75 }}
       className="flex w-full items-center justify-center sm:py-8"
     >
       <SectionCard>
