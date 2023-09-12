@@ -19,11 +19,13 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       >
         <Sidebar />
       </div>
-      <main className="md:pl-72 lg:pl-96 h-full w-full pt-24 md:pt-0">
+      <main className="md:pl-72 lg:pl-96 h-full w-full">
         <div className="absolute md:relative top-0 right-0 w-full z-20">
           <Header />
         </div>
-        <AnimatePresence>{children}</AnimatePresence>
+        <div className="pt-24">
+          <AnimatePresence>{children}</AnimatePresence>
+        </div>
       </main>
     </div>
   );

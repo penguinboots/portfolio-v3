@@ -49,7 +49,7 @@ export const Header = () => {
   return (
     <div
       className={cn(
-        "bg-header text-header-text flex flex-col transition-all duration-500 overflow-hidden",
+        "absolute w-full bg-sidebar md:bg-header text-sidebar-text md:text-header-text flex flex-col transition-all duration-500 overflow-hidden",
         isOpen ? "h-screen" : "h-24"
       )}
     >
@@ -72,7 +72,7 @@ export const Header = () => {
         </div>
         <div className="md:hidden w-full h-full absolute right-0 top-0">
           <div className="flex items-center justify-end">
-            <div className={cn("p-6 transition-all duration-300", isOpen ? "text-sidebar-text" : "text-header-text")}>
+            <div className="p-6 transition-all duration-300 text-sidebar-text">
               <Hamburger toggled={isOpen} toggle={setIsOpen} />
             </div>
           </div>
