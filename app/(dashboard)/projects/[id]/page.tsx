@@ -17,7 +17,7 @@ const ProjectPage = () => {
           </div>
         </Link>
       </div>
-      <div className="flex fixed bottom-4 left-4 md:hidden z-20">
+      <div className="flex fixed bottom-4 left-4 md:hidden">
         <Link href="/projects">
           <div className="p-2 rounded-full bg-slate-200">
             <ChevronLeft className="w-12 h-12" />
