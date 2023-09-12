@@ -54,7 +54,8 @@ module.exports = {
         // CUSTOM COLOUR THEMES
         base: {
           DEFAULT: "hsl(var(--base))",
-          text: "hsl(var(--base-text))"
+          text: "hsl(var(--base-text))",
+          grad: "hsl(var(--base-grad))"
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar))",

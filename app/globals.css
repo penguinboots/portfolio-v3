@@ -38,6 +38,7 @@
     /* CUSTOM COLOURS */
 
     --base: 350 38% 72%; /* med-pink */
+    --base-grad: 341 35% 65%; /* mid-dark-pink */
     --base-text: 341 60% 18%; /* maroon-pink */
 
     --sidebar: 120 14% 25%; /* dark-green */
@@ -47,7 +48,7 @@
     --sidebar-grad: 120 14% 20%; /* darker-green */
 
     --header: 341 35% 60%; /* dark-pink */
-    --header-grad: 341 35% 65%; /* mid-dark-pink */
+    --header-grad: 341 35% 55%; /* darker-pink */
     --header-text: 341 60% 18%; /* maroon-pink */
 
     --card: 45 60% 89%; /* light-yellow */
