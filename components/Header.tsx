@@ -47,7 +47,7 @@ export const Header = () => {
 
   let Icon;
   let home = pathname === "/home";
-  let pView = pathname.lastIndexOf("/") !== 0;
+  let pView = pathname.includes("/projects/");
 
   if (!pView) {
     Icon = routes[pathname].icon;
@@ -60,7 +60,7 @@ export const Header = () => {
           <div
             className={cn(
               "p-6 text-sidebar-text transition-all duration-300",
-              home && !isOpen ? "text-sidebar" : "",
+              [home && !isOpen ? "text-sidebar" : "", pView && "hidden"]
             )}
           >
             <Hamburger toggled={isOpen} toggle={setIsOpen} />
@@ -75,7 +75,7 @@ export const Header = () => {
           duration-500 md:border-none md:bg-header md:text-header-text`,
           [
             isOpen ? "h-screen" : "h-24 ",
-            home || (pView && !isOpen) ? "h-0" : "",
+            (home || pView) && !isOpen ? "h-0 border-none" : "",
           ],
         )}
       >
