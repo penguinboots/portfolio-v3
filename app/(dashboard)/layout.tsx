@@ -25,11 +25,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar />
       </div>
       <div className="absolute top-0 left-0 w-full z-20">
-        <Header
-          title={routes[pathname].label}
-          desc={routes[pathname].description}
-          icon={routes[pathname].icon}
-        />
+        <Header />
       </div>
       <main className="md:pl-72 lg:pl-96 h-full w-full pt-24">
         <AnimatePresence>{children}</AnimatePresence>
