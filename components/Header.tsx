@@ -70,26 +70,34 @@ export const Header = () => {
         )}
       >
         {/* PATH ICON & TITLE */}
-        <div className="flex">
+        <div>
           <div
             className={cn(
               "flex h-24 items-center gap-2 p-6 transition-all duration-500",
               isOpen ? "opacity-0" : "opacity-100",
             )}
           >
-            {!home && (
-              <>
-                <Icon className="h-12 w-12" />
-                <div>
-                  <h1 className={cn("pt-1 text-xl", titleFont.className)}>
-                    {routes[pathname].label}
-                  </h1>
-                  <h2 className={cn("text-sm", titleFont.className)}>
-                    {routes[pathname].description}
-                  </h2>
-                </div>
-              </>
-            )}
+            <AnimatePresence>
+              {!home && (
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5}}
+                  className="flex gap-2"
+                >
+                  <Icon className="h-12 w-12" />
+                  <div>
+                    <h1 className={cn("pt-1 text-xl", titleFont.className)}>
+                      {routes[pathname].label}
+                    </h1>
+                    <h2 className={cn("text-sm", titleFont.className)}>
+                      {routes[pathname].description}
+                    </h2>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
         {/* NAV ITEMS */}
@@ -100,7 +108,7 @@ export const Header = () => {
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
-                transition={{ ease: "linear", duration: 0.5 }}
+                transition={{ duration: 0.5 }}
                 className="z-30 flex w-full flex-col items-center sm:pb-10 md:px-12"
               >
                 {/* LINKS */}
