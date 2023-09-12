@@ -32,7 +32,7 @@ const socials = [
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="flex h-full flex-col items-center justify-evenly bg-sidebar">
+    <div className="flex h-full flex-col items-center justify-evenly bg-sidebar bg-gradient-to-t from-sidebar-grad">
       <div className="flex h-40 w-40 items-center justify-center self-center rounded-full border-4 border-base bg-card">
         <PiFlowerLotusDuotone className="h-28 w-28 text-base" />
       </div>

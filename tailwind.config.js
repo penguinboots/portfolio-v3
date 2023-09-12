@@ -60,7 +60,8 @@ module.exports = {
           DEFAULT: "hsl(var(--sidebar))",
           text: "hsl(var(--sidebar-text))",
           hover: "hsl(var(--sidebar-text-hover))",
-          light: "hsl(var(--sidebar-light))"
+          light: "hsl(var(--sidebar-light))",
+          grad: "hsl(var(--sidebar-grad))"
         },
         header: {
           DEFAULT: "hsl(var(--header))",
@@ -70,6 +71,7 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           bghover: "hsl(var(--card-hover))",
+          light: "hsl(var(--card-light))",
           text: "hsl(var(--card-text))",
           hover: "hsl(var(--card-text-hover))",
           alt: "hsl(var(--card-alt))",

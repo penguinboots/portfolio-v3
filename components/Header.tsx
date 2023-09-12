@@ -50,7 +50,7 @@ export const Header = () => {
   return (
     <>
       {/* HAMBURGER ICON */}
-      <div className="absolute right-0 top-0 z-30 h-24 w-full md:hidden">
+      <div className="absolute right-0 top-0 z-20 h-24 w-full md:hidden">
         <div className="flex items-center justify-end">
           <div
             className={cn(
