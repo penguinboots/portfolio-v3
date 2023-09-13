@@ -25,7 +25,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
   });
 
   return (
-    <div className="hover:bg-card-bghover md:hover:scale-[1.02] relative rounded-xl bg-card drop-shadow-lg transition-all">
+    <div className="relative rounded-xl bg-gradient-to-tl from-card to-card-bghover drop-shadow-lg transition-all duration-200 md:hover:scale-[1.02]">
       <div className="h-48 overflow-hidden rounded-t-xl bg-card-alt md:h-64">
         <Link href={`/projects/${project.ref}`}>
           <div className="relative h-full w-full">
@@ -46,7 +46,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
             <Link href={`/projects/${project.ref}`}>
               <h1
                 className={cn(
-                  "text-xl hover:text-card-hover",
+                  "text-xl hover:text-card-hover hover:underline",
                   titleFont.className,
                 )}
               >
