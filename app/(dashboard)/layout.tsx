@@ -2,7 +2,6 @@
 import { Header } from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { cn } from "@/lib/utils";
-import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
@@ -41,7 +40,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               : "pt-24",
           )}
         >
-          <AnimatePresence>{children}</AnimatePresence>
+          {children}
         </div>
       </main>
     </div>

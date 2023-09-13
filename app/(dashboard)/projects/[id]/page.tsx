@@ -1,5 +1,5 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
