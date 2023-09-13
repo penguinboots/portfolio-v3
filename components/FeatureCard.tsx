@@ -28,7 +28,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
     <div className="relative rounded-xl bg-gradient-to-tl from-card to-card-bghover drop-shadow-lg transition-all duration-200 md:hover:scale-[1.02]">
       <div className="h-48 overflow-hidden rounded-t-xl bg-card-alt md:h-64">
         <Link href={`/projects/${project.ref}`}>
-          <div className="relative h-full w-full">
+          <div className="relative h-full w-full rounded-t-xl">
             <Image
               alt={project.title}
               src={`/projects/previews/${project.ref}.gif`}

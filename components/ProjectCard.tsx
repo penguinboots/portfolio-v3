@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         src={`/projects/previews/${project.ref}.gif`}
         fill
         style={{ objectFit: "cover" }}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <div
         className="z-10 flex h-full w-full flex-col items-center 
