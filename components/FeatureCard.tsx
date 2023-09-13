@@ -34,7 +34,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
               src={`/projects/previews/${project.ref}.gif`}
               fill
               style={{ objectFit: "cover" }}
-              className="transition-opacity hover:opacity-90"
+              className="transition-opacity hover:opacity-90 rounded-t-xl"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
