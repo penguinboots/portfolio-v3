@@ -10,7 +10,6 @@ const ContactPage = () => {
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0 }}
       transition={{ ease: "easeOut", duration: 0.75 }}
       className="flex w-full items-center justify-center sm:mt-24"
     >

@@ -34,8 +34,7 @@ const ProjectsPage = () => {
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -50 }}
-      transition={{ duration: 0.75 }}
+      transition={{ ease: "easeOut", duration: 0.75 }}
       className="flex w-full flex-col items-center"
     >
       <div className="grid w-full grid-cols-1 gap-4 p-4 sm:max-w-md lg:max-w-none lg:grid-cols-2 2xl:grid-cols-3">
