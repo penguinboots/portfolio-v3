@@ -15,29 +15,6 @@ const education = [lighthouse, ubc];
 const work = [apple, catch122, minami, murphy];
 
 const ExperiencePage = () => {
-  let eduCards = education.map((exp, i) => (
-    <motion.div
-      initial={{ opacity: 0.5, y: -40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: (0.5 / education.length) * i }}
-      key={exp.title}
-      className=""
-    >
-      <ExperienceCard exp={exp} />
-    </motion.div>
-  ));
-
-  let workCards = work.map((exp, i) => (
-    <motion.div
-      initial={{ opacity: 0.5, y: -40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: (0.5 / work.length) * i }}
-      key={exp.title}
-    >
-      <ExperienceCard exp={exp} />
-    </motion.div>
-  ));
-
   let sectionTitle =
     "w-full lg:w-5/6 text-bold text-2xl mt-6 mb-2 px-2 md:px-0 md:mt-8";
 
