@@ -22,7 +22,7 @@ const ContactForm = () => {
 
   const formSectionStyles = "flex flex-col w-full py-2 space-y-2";
   const formLabelStyles = "text-lg font-semibold";
-  const inputStyles = "rounded-lg p-2 px-4";
+  const inputStyles = "rounded-lg p-2 px-4 focus:outline-sidebar-light text-sidebar";
   const errorStyles = "text-xs text-red-500 h-0";
 
   return (
@@ -79,7 +79,7 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="flex w-full justify-center py-4">
-        <Button className="w-full rounded-2xl px-12 py-6 sm:w-auto">
+        <Button className="hover:text-sidebar-text-hover w-full rounded-2xl bg-sidebar px-12 py-6 text-sidebar-text hover:bg-sidebar-light sm:w-auto">
           Send it!
         </Button>
       </div>

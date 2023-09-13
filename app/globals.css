@@ -56,8 +56,8 @@
     --card-light: 45 40% 80%; /* light-med-yellow */
     --card-text: 341 60% 18%; /* pink-red */
     --card-text-hover: 341 35% 50%; /* dark-pink */
-    --card-alt: 350 40% 85%; /* light-pink */
-    --card-alt-hover: 350 40% 86.3%; /* lightest-pink */
+    --card-alt: 360 40% 85%; /* light-pink */
+    --card-alt-hover: 360 40% 86.3%; /* lightest-pink */
   }
 
   .dark {
