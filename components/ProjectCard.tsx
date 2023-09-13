@@ -21,7 +21,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     );
   });
   return (
-    <div className="flex h-48 w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-sidebar drop-shadow-lg">
+    <div
+      className="flex h-48 w-full flex-col items-center justify-center
+                overflow-hidden rounded-xl bg-sidebar drop-shadow-lg
+                transition-all md:hover:scale-[1.02]"
+    >
       <Image
         alt={project.title}
         src={`/projects/previews/${project.ref}.gif`}
@@ -30,8 +34,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <div
-        className="flex h-full w-full flex-col items-center justify-center 
-        bg-card-bghover/95 opacity-0 hover:opacity-100 z-10"
+        className="z-10 flex h-full w-full flex-col items-center 
+        justify-center bg-card-bghover/95 opacity-0 hover:opacity-100"
       >
         <h1 className={cn("px-2 text-center text-xl", titleFont.className)}>
           {project.title}
