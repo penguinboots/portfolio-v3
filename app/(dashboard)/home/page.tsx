@@ -24,7 +24,6 @@ const HomePage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, x: 50 }}
-        exit={{ opacity: 0 }}
         transition={{ ease: "easeOut", duration: 0.75 }}
         className="flex h-full w-2/3 flex-col justify-center space-y-4 pl-12"
       >
