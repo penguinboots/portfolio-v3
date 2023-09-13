@@ -7,6 +7,15 @@ export interface Project {
   stack: string[];
 }
 
+const portfoliov3: Project = {
+  title: "Portfolio Website v3",
+  ref: "portfoliov3",
+  description: "It's this website!",
+  live: "https://donut-portfolio.vercel.app/",
+  repo: "https://github.com/penguinboots/portfolio-v3",
+  stack: ["typescript", "react", "next", "tailwind", "framer", "shadcn", "vercel"],
+};
+
 const genius: Project = {
   title: "Lil Genius",
   ref: "genius",
@@ -61,7 +70,7 @@ const mimikyu: Project = {
     "Capstone Project: A pokemon-themed roguelite game. Art and design by me.",
   live: "https://mimikyus-day-off.vercel.app",
   repo: "https://github.com/penguinboots/poke-rogue",
-  stack: ["javascript", "react", "next", "node", "sass", "prisma", "vercel"],
+  stack: ["javascript", "react", "next", "sass", "prisma", "vercel"],
 };
 
 const shortly: Project = {
@@ -123,4 +132,5 @@ export {
   tweeter,
   messenger,
   genius,
+  portfoliov3
 };

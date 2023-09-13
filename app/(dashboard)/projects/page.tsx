@@ -16,10 +16,12 @@ import {
   tweeter,
   messenger,
   genius,
+  portfoliov3
 } from "@/data/projects";
 
 const features = [mimikyu, messenger, genius];
 const projects = [
+  portfoliov3,
   bytes,
   shortly,
   portfoliov2,
@@ -49,7 +51,7 @@ const ProjectsPage = () => {
             <FeatureCard project={feature} />
           </motion.li>
         ))}
-        <li className="hidden bg-slate-100 lg:flex xl:hidden">IMAGE HERE</li>
+        <li className="hidden bg-slate-100 lg:flex 2xl:hidden">IMAGE HERE</li>
       </ul>
       <ul className="grid w-full list-none grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {projects.map((project, i) => (
