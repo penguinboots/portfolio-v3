@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   });
   return (
     <div
-      className="flex h-48 w-full flex-col items-center justify-center
+      className="relative flex h-48 w-full flex-col items-center justify-center
                 overflow-hidden rounded-xl bg-sidebar drop-shadow-lg
                 transition-all md:hover:scale-[1.02]"
     >
