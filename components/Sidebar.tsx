@@ -33,8 +33,8 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <div className="from-sidebar-grad flex h-full flex-col items-center justify-evenly bg-sidebar bg-gradient-to-t">
-      <div className="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-full bg-card drop-shadow-md">
-        <Image src="/badge.png" alt="logo" fill />
+      <div className="relative flex h-48 w-48 items-center justify-center overflow-hidden drop-shadow-md">
+        <Image src="/badge2.png" alt="logo" fill />
       </div>
       <div className="w-2/3 flex-col space-y-4 p-4">
         {routeArray.map((route) => (
