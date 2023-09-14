@@ -61,7 +61,7 @@ const SkillsPage = () => {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ ease: "easeOut", duration: 0.75 }}
-      className="flex w-full justify-center my-12"
+      className="flex w-full justify-center sm:my-12"
     >
       <SectionCard>
         <div className="space-y-12 p-2">
