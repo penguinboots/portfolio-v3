@@ -34,7 +34,7 @@ const Sidebar = () => {
   return (
     <div className="from-sidebar-grad flex h-full flex-col items-center justify-evenly bg-sidebar bg-gradient-to-t">
       <div className="relative flex h-48 min-h-[192px] w-48 min-w-[192px] items-center justify-center overflow-hidden drop-shadow-md">
-        <Image src="/badge2.png" alt="logo" fill />
+        <Image src="/badge2.png" alt="logo" fill priority sizes="20vw" />
       </div>
       <div className="w-2/3 flex-col space-y-4 p-4">
         {routeArray.map((route) => (
