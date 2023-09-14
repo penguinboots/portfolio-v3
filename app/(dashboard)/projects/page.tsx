@@ -16,7 +16,7 @@ import {
   tweeter,
   messenger,
   genius,
-  portfoliov3
+  portfoliov3,
 } from "@/data/projects";
 
 const features = [mimikyu, messenger, genius];
@@ -44,21 +44,26 @@ const ProjectsPage = () => {
           <motion.li
             initial={{ opacity: 0.5, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 / features.length * i }}
+            transition={{ duration: 0.5, delay: (0.5 / features.length) * i }}
             key={feature.title}
             className="list-none"
           >
             <FeatureCard project={feature} />
           </motion.li>
         ))}
-        <li className="hidden bg-slate-100 lg:flex 2xl:hidden">IMAGE HERE</li>
+        <li
+          className="from-header-grad hidden items-center justify-center rounded-2xl
+                    bg-gradient-to-tl to-header text-card lg:flex 2xl:hidden"
+        >
+          hello world
+        </li>
       </ul>
       <ul className="grid w-full list-none grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {projects.map((project, i) => (
           <motion.li
             initial={{ opacity: 0.5, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 / projects.length * i }}
+            transition={{ duration: 0.3, delay: (0.5 / projects.length) * i }}
             key={project.title}
           >
             <ProjectCard project={project} />
