@@ -14,12 +14,12 @@ const routes: { [key: string]: Route } = {
     description: "",
     href: "/home",
   },
-  "/about": {
-    label: "About",
-    icon: Laugh,
-    description: "all about me!",
-    href: "/about",
-  },
+  // "/about": {
+  //   label: "About",
+  //   icon: Laugh,
+  //   description: "all about me!",
+  //   href: "/about",
+  // },
   "/projects": {
     label: "Projects",
     icon: FileCode,
