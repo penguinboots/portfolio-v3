@@ -35,7 +35,7 @@ export const ubc: Experience = {
   title: "The University of British Columbia",
   note: "graduated with distinction",
   subtitle: "Bachelor of Arts - Psychology",
-  date: "Graduated May 2023",
+  date: "Graduated May 2023 - with Distinction",
   desc: `After some time away from university, I returned to finish my undergraduate degree majoring in psychology.
         I delved into the complexities of human behaviour, also developing a deep understanding of empathy, cultural sensitivity,
         and ethical reasoning. My time at UBC equipped me with a diverse toolkit of transferrable skills that I'm eager to
