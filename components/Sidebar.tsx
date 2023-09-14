@@ -1,7 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { PiFlowerLotusDuotone } from "react-icons/pi";
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -9,6 +8,7 @@ import { Button } from "./ui/button";
 import routes from "@/lib/routes";
 import type { Route } from "../lib/routes";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const routeArray: Route[] = Object.values(routes);
 const socials = [
@@ -32,9 +32,9 @@ const socials = [
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="flex h-full flex-col items-center justify-evenly bg-sidebar bg-gradient-to-t from-sidebar-grad">
-      <div className="flex h-40 w-40 items-center justify-center self-center rounded-full border-4 border-base bg-card">
-        <PiFlowerLotusDuotone className="h-28 w-28 text-base" />
+    <div className="from-sidebar-grad flex h-full flex-col items-center justify-evenly bg-sidebar bg-gradient-to-t">
+      <div className="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-full bg-card drop-shadow-md">
+        <Image src="/badge.png" alt="logo" fill />
       </div>
       <div className="w-2/3 flex-col space-y-4 p-4">
         {routeArray.map((route) => (
