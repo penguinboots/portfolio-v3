@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { titleFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -13,6 +14,16 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   const stack = project.stack.map((item) => {
     return (
       <li key={item} className="h-6 w-6 text-sm">
@@ -31,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         src={`/projects/previews/${project.ref}.gif`}
         fill
         style={{ objectFit: "cover" }}
-        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <div
         className="z-10 flex h-full w-full flex-col items-center 

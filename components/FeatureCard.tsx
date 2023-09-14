@@ -10,12 +10,23 @@ import Link from "next/link";
 
 import DevIcon from "./DevIcon";
 import ProjectLinks from "./ProjectLinks";
+import { useEffect, useState } from "react";
 
 interface FeatureCardProps {
   project: Project;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   const stack = project.stack.map((item) => {
     return (
       <li key={item} className="h-7 w-7 text-lg">
@@ -34,7 +45,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ project }) => {
               src={`/projects/previews/${project.ref}.gif`}
               fill
               style={{ objectFit: "cover" }}
-              className="transition-opacity hover:opacity-90 rounded-t-xl"
+              priority
+              className="rounded-t-xl transition-opacity hover:opacity-90"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
