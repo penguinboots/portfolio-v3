@@ -30,7 +30,7 @@ export default function Landing() {
         <div className="relative flex w-full items-center justify-center">
           <Link href="/" onClick={handleClick} className="z-20">
             <Button
-              className="hover:bg-header-grad rounded-2xl bg-header p-6 text-2xl text-card"
+              className="hover:bg-header-grad rounded-3xl bg-header p-6 md:p-8 text-sm sm:text-md md:text-2xl text-card"
               onClick={handleAnim}
             >
               {`System.out.println("hello world");`}
